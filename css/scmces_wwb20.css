@@ -1,0 +1,312 @@
+:root {
+  --bg: rgb(33, 37, 40);
+  --gold: rgb(255, 230, 153);
+  --text: rgb(217, 217, 217);
+  --muted: rgba(217,217,217,0.78);
+  --panel: rgba(255,255,255,0.04);
+  --panel2: rgba(255,255,255,0.06);
+  --line: rgba(255,255,255,0.12);
+  --shadow: 0 10px 30px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:Segoe UI, Arial, sans-serif;line-height:1.55}
+a{color:var(--gold);text-decoration:none}
+a:hover{text-decoration:underline}
+img{max-width:100%;height:auto;border:0}
+.container{width:100%;max-width:1024px;margin:0 auto;padding:0 18px}
+.topbar{background:rgba(0,0,0,0.35);border-bottom:1px solid var(--line)}
+.brandrow{display:flex;align-items:center;gap:16px;padding:12px 0}
+.brandrow .logo{width:140px;flex:0 0 auto}
+.brandrow .title{flex:1 1 auto}
+.brandrow h1{margin:0;font-size:22px;letter-spacing:.5px;color:var(--gold);font-weight:800}
+.brandrow .tag{margin-top:4px;color:var(--muted);font-size:13px}
+.navbar{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(0,0,0,0.25)}
+.nav{display:flex;flex-wrap:wrap;gap:10px;padding:10px 0}
+.nav a{display:inline-block;padding:8px 12px;border:1px solid transparent;border-radius:10px;color:var(--text)}
+.nav a.active,.nav a:hover{border-color:rgba(255,230,153,0.45);background:rgba(255,230,153,0.08);color:var(--gold)}
+.section{padding:38px 0}
+.section h2{margin:0 0 14px 0;color:var(--gold);font-size:22px}
+.section h3{margin:18px 0 10px 0;color:var(--gold);font-size:17px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);padding:18px}
+.grid2{display:grid;grid-template-columns:1.15fr .85fr;gap:18px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media (max-width: 980px){.grid2,.grid3{grid-template-columns:1fr} .brandrow{flex-wrap:wrap}}
+.kpi{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+@media (max-width: 980px){.kpi{grid-template-columns:repeat(2,1fr)}}
+.kpi .k{background:var(--panel2);border:1px solid var(--line);border-radius:14px;padding:14px}
+.kpi .k .n{color:var(--gold);font-weight:800;font-size:18px}
+.kpi .k .t{color:var(--muted);font-size:12.5px;margin-top:2px}
+.btn{display:inline-block;padding:10px 14px;border-radius:12px;border:1px solid rgba(255,230,153,0.5);background:rgba(255,230,153,0.10);color:var(--gold);font-weight:700}
+.btn:hover{background:rgba(255,230,153,0.16);text-decoration:none}
+.list{margin:0;padding-left:18px}
+.list li{margin:6px 0}
+.hr{height:1px;background:var(--line);margin:16px 0}
+.thumbgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media (max-width: 980px){.thumbgrid{grid-template-columns:1fr}}
+.thumb{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.thumb .cap{padding:10px 12px;color:var(--muted);font-size:13px}
+.footer{padding:20px 0;border-top:1px solid var(--line);background:rgba(0,0,0,0.25)}
+.footer .small{color:var(--muted);font-size:12.5px}
+input,button{font-family:inherit}
+.card{
+  margin-top:25px;
+}
+
+.card h2 {
+  font-size: clamp(20px, 4vw, 30px);
+  margin-bottom: 0.3em; /* smaller space below heading */
+  line-height: 1.2;     /* tighter spacing */
+}
+
+.card p {
+  margin-top: 0.2em;    /* small space above paragraph */
+  font-size: clamp(14px, 2.5vw, 18px); /* responsive text */
+  line-height: 1.4;
+}
+
+
+/**************** Download Button styling **************/
+
+/* Remove absolute positioning so button is below image */
+.cap {
+  position: static;  /* default flow */
+  width: 100%;
+  margin-top: 4px;  /* space between image and button */
+  text-align: center;
+}
+
+/* Full-width button */
+.download-btn {
+  width: 100%;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 12px 0;
+  font-size: 17px;  
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 8px;  /* rounded all corners now */
+  transition: background 0.3s;
+}
+
+.download-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+  .download-btn {
+    font-size: 14px;
+    padding: 10px 0;
+  }
+}
+
+
+/*  FAQ ********************/
+
+/* ===== FAQ ACCORDION (FORCED VISIBILITY) ===== */
+
+/* FAQ container – no background */
+.faq-item {
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  padding: 14px 0;
+}
+
+/* Question row */
+.faq-question {
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;     /* SAME LINE */
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* Question text */
+.question-text {
+  text-align: left;
+}
+
+/* Arrow */
+.arrow {
+  font-size: 18px;
+  color: #ffffff;          /* VISIBLE WHITE */
+  margin-left: 12px;
+  transition: transform 0.3s ease;
+}
+
+/* Rotate arrow when open */
+.faq-item.active .arrow {
+  transform: rotate(180deg);
+}
+
+/* Answer */
+.faq-answer {
+  color: rgba(255,255,255,0.85);
+  font-size: 14px;
+  line-height: 1.6;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+
+/* Show answer */
+.faq-item.active .faq-answer {
+  max-height: 500px;
+  margin-top: 8px;
+}
+
+/* ===============================
+   Mobile-only responsive behavior for SHM Solutions page
+   =============================== */
+/* Hide mobile images by default */
+.mobile-img {
+  display: none;
+}
+
+/* Show only on mobile screens */
+/* SHM Solutions page - scoped only */
+@media (max-width: 768px) {
+  .shm-page .grid2 {
+    display: block;           /* stack columns vertically */
+    grid-template-columns: 1fr; /* single column */
+  }
+
+  .shm-page .grid2 > div:last-child {
+    display: none;            /* hide right column if needed */
+  }
+
+  .shm-page .mobile-img {
+    display: block;
+    width: 100%;
+    margin: 15px 0;
+  }
+
+  .shm-page .mobile-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,0.12);
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  /* override global hide rule ONLY for this section */
+  .show-img-mobile .grid2 > div:last-child {
+    display: block;
+  }
+
+  .show-img-mobile .grid2 {
+    display: block;
+  }
+
+  .show-img-mobile .grid2 img {
+    width: 100%;
+    height: auto;
+    margin-top: 15px;
+  }
+
+}
+
+/***********only for Services page *******/
+
+/* Container for text + images */
+.servicesection .service-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* equal width columns */
+  gap: 30px;
+  align-items: center; /* vertical center */
+}
+
+/* Each image container */
+.servicesection .service-img {
+  width: 100%;
+}
+
+/* Images inside the container */
+.servicesection .service-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* Optional: reduce top margin for this section only */
+.servicesection {
+  margin-top: 20px;
+}
+
+/* Mobile: stack text + images */
+@media (max-width: 768px) {
+  .servicesection .service-row {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+/* ===============================
+   CONTACT PAGE – RESPONSIVE ONLY
+================================ */
+/* ===============================
+   CONTACT PAGE – LAYOUT OVERRIDES
+   (Does NOT affect global .grid2)
+================================ */
+
+/* Desktop / default */
+.contact-section .grid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* Ensure cards behave correctly */
+.contact-section .card {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ===============================
+   MOBILE VIEW
+================================ */
+@media (max-width: 768px) {
+
+  /* Stack columns */
+  .contact-section .grid2 {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  /* Full-width form elements */
+  .contact-section input,
+  .contact-section select,
+  .contact-section textarea,
+  .contact-section button {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Responsive Google Map */
+  .contact-section iframe {
+    width: 100%;
+    height: 260px;
+  }
+
+  /* Reduce section spacing slightly */
+  .contact-section {
+    padding-top: 20px;
+  }
+
+  .contact-section .card .h3{
+    color:rgb(255, 230, 153)
+  }
+}
+
+
