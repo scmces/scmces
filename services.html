@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Services| SCMCES</title>
+<link href="images/01_SCMCES Company logo.png" rel="icon" sizes="3998x2187" type="image/png">
+<link rel="stylesheet" href="css/scmces_wwb20.css">
+<link rel="stylesheet" href="css/slideshow.css">
+</head>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  document.querySelectorAll(".slideshow").forEach((slideshow) => {
+
+    let index = 0;
+    const slides = slideshow.querySelectorAll(".slide");
+
+    function showSlide(i) {
+      slides.forEach(slide => slide.classList.remove("active"));
+      index = (i + slides.length) % slides.length;
+      slides[index].classList.add("active");
+    }
+
+    // Auto-play (every 3 seconds)
+    setInterval(() => {
+      showSlide(index + 1);
+    }, 3000);
+
+    // Button controls (only for this slideshow)
+    slideshow.querySelector(".prev").addEventListener("click", () => {
+      showSlide(index - 1);
+    });
+
+    slideshow.querySelector(".next").addEventListener("click", () => {
+      showSlide(index + 1);
+    });
+
+    // Initialize
+    showSlide(index);
+
+  });
+
+});
+</script>
+<body>
+<header class="topbar">
+  <div class="container">
+    <div class="brandrow">
+      <div class="logo"><img src="images/01_SCMCES Company logo.png" alt="SCMCES Logo"></div>
+      <div class="title">
+        <h1  style="font-size: 35px">SCM Consultancy & Engineering Services (SCMCES)</h1>
+        <!--<div class="tag">Engineering Insight ✤ Monitoring Integrity ✤ Building Futures</div>-->
+       <!--<div style="margin-top:0.5px;"><img src="images/00_tagline.png" alt="Tagline" style="max-width:720px;width:100%;height:auto;"></div>-->
+      </div>
+    </div>
+  </div>
+</header>
+
+<nav class="navbar">
+  <div class="container"><div class="nav"><a href="index.html" class="">Home</a><a href="services.html" class="">Services</a><a href="shm_solutions.html" class="">SHM Solutions</a><a href="brochures-projects.html" class="">Brochures & Projects</a><a href="blogs-media.html" class="">Blogs & Media</a><a href="contact-us.html" class="">Contact us</a></div></div>
+</nav>
+
+<main>
+<section class="section">
+  <div class="container">
+    <div class="card">
+      <h2>Our Services</h2>   
+      <div class="container" style="margin:0; max-width:100%; padding:0;">
+      <div class="brandrow" style="margin:0; padding:0px 0;">   
+      <div class="grid">
+        <div class="slideshow">
+            <img class="slide active" src="images/01_SCMCES SERVICES_01.png" alt="Structural Design">
+            <img class="slide active" src="images/01_SCMCES SERVICES_02.png" alt="Remedial Engineering">
+            <img class="slide active" src="images/01_SCMCES SERVICES_03.png" alt="Structural Monitoring">
+                      
+
+            <button class="prev">❮</button>
+            <button class="next">❯</button>
+             
+          </div>
+      </div>
+    </div>
+  </div>
+  <section class="servicesection">
+  <div class="container">
+    <div class="card">
+
+      <h2>Structural Design Consultancy</h2>
+      <div class="hr"></div>
+
+      <div class="service-row">
+
+        <!-- TEXT -->
+        <div class="service-text">
+          <p>
+            SCMCES supports clients in making informed decisions on
+            <b>how structures are designed and reviewed.</b>
+            We ensure that buildings and infrastructure are not only
+            code-compliant, but also practical, safe, and suited to their
+            intended use throughout their service life.
+            <br><br>
+            SCMCES offers expert <b>structural analysis and design consultancy</b>
+            for buildings, bridges, industrial structures, and complex civil
+            infrastructure.
+            Our services include <b>design review, code compliance checks,
+            performance-based analysis, and constructability assessment</b>,
+            ensuring safe, economical, and durable structural solutions aligned
+            with Indian and international standards.
+          </p>
+        </div>
+
+        <!-- IMAGE -->
+        <div class="service-img">
+          <img src="images/Services/services_SD01.png" alt="Structural Design Service">
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+<section class="servicesection">
+  <div class="container">
+    <div class="card">
+
+      <h2>Remedial & Rehabilitation Engineering</h2>
+      <div class="hr"></div>
+
+      <div class="service-row">
+
+        <!-- TEXT -->
+        <div class="service-text">
+          <p>
+            When structures show signs of distress, damage, or performance issues,
+            SCMCES helps identify what is really going wrong and why.
+            <br><br>
+            Based on detailed investigation, testing, and analysis, we recommend
+            targeted repair and strengthening solutions that improve safety and
+            extend the usable life of the structure.
+            <br><br>
+            SCMCES provides advanced structural assessment, repair, and rehabilitation
+            solutions for distressed and aging structures using
+            <b>Non-Destructive Testing (NDT), load testing, and root-cause evaluation</b>.
+            <br><br>
+            Our retrofitting, strengthening, and vibration mitigation solutions are
+            based on <b>Advanced Rehabilitation Technologies (ART)</b> to restore
+            performance and extend service life.
+          </p>
+        </div>
+
+        <!-- IMAGE -->
+        <div class="service-img">
+          <img src="images/Services/services_RE01.png" alt="Remedial Engineering Service">
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+<section class="servicesection">
+  <div class="container">
+    <div class="card">
+
+      <h2>Structural Monitoring & SHM Services</h2>
+      <div class="hr"></div>
+
+      <div class="service-row">
+
+        <!-- TEXT -->
+        <div class="service-text">
+          <p>
+            SCMCES helps clients see how their structures actually behave under real operating conditions. By measuring vibration, strain, and movement, we provide clear engineering insights that support maintenance planning, risk reduction, and long-term infrastructure reliability.
+            <br><br>
+            SCMCES delivers comprehensive Structural Monitoring and Structural Health Monitoring (SHM) services for civil infrastructure subjected to static and dynamic loads. Our solutions include sensor-based monitoring, vibration assessment, data analysis, and condition evaluation, supporting construction-stage monitoring, operational safety, and long-term asset management.
+
+          </p>
+        </div>
+
+        <!-- IMAGE -->
+        <div class="service-img">
+          <img src="images/Services/services_SM01.png" alt="Structural Monitoring Service">
+        </div>
+
+
+      </div>
+
+    </div>
+  </div>
+</section>
+<section class="servicesection">
+  <div class="container">
+    <div class="card">
+
+      <h2>Education, Training & Research Support </h2>
+      <div class="hr"></div>
+
+      <div class="service-row">
+
+        <!-- TEXT -->
+        <div class="service-text">
+          <p>
+            Alongside consultancy services, SCMCES actively supports the civil engineering community through training programs, internships, and research guidance in areas such as structural analysis & design review, structural assessment, NDT, load testing, vibration studies, SHM, and remedial engineering—helping engineers bridge theory with real-world practice.
+
+          </p>
+        </div>
+
+        <!-- IMAGE -->
+        <div class="service-img">
+          <img src="images/Services/services_all01.png" alt="Education & Training Support">
+        </div>       
+        
+
+      </div>
+
+    </div>
+  </div>
+</section>
+<section class="servicesection">
+  <div class="container">
+    <div class="card">
+
+      <h2>Research and Development </h2>
+      <div class="hr"></div>
+
+      <div class="service-row">   
+        
+
+        <!-- IMAGE -->
+        <div class="service-img">
+          <img src="images/Services/services_RnD01.png" alt="Reaserch & Development">
+        </div>    
+
+        <div class="service-img">
+          <img src="images/Services/services_training01.png" alt="Reaserch & Development">
+        </div>       
+        
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="small">
+      <center>  © <span id="y"></span> SCMCES &nbsp;Email: <a href="mailto:scmces.consultants@gmail.com">scmces.consultants@gmail.com</a></center>
+      <div style="margin-top:6px;"> </div>
+    </div>
+  </div>
+</footer>
+<script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+<script src="nav-active.js"></script>
+</body>
+</html>

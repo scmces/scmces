@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brochures & Projects | SCMCES</title>
+<link href="images/01_SCMCES Company logo.png" rel="icon" sizes="3998x2187" type="image/png">
+<link rel="stylesheet" href="css/scmces_wwb20.css">
+<link rel="stylesheet" href="css/slideshow.css">
+</head>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  document.querySelectorAll(".slideshow").forEach((slideshow) => {
+
+    let index = 0;
+    const slides = slideshow.querySelectorAll(".slide");
+
+    function showSlide(i) {
+      slides.forEach(slide => slide.classList.remove("active"));
+      index = (i + slides.length) % slides.length;
+      slides[index].classList.add("active");
+    }
+
+    // Auto-play (every 3 seconds)
+    setInterval(() => {
+      showSlide(index + 1);
+    }, 2000);
+
+    // Button controls (only for this slideshow)
+    slideshow.querySelector(".prev").addEventListener("click", () => {
+      showSlide(index - 1);
+    });
+
+    slideshow.querySelector(".next").addEventListener("click", () => {
+      showSlide(index + 1);
+    });
+
+    // Initialize
+    showSlide(index);
+
+  });
+
+});
+</script>
+
+<body>
+<header class="topbar">
+  <div class="container">
+    <div class="brandrow">
+      <div class="logo"><img src="images/01_SCMCES Company logo.png" alt="SCMCES Logo"></div>
+      <div class="title">
+        <h1  style="font-size: 35px">SCM Consultancy & Engineering Services (SCMCES)</h1>
+        <!--<div class="tag">Engineering Insight ✤ Monitoring Integrity ✤ Building Futures</div>-->
+       <!--<div style="margin-top:0.5px;"><img src="images/00_tagline.png" alt="Tagline" style="max-width:720px;width:100%;height:auto;"></div>-->
+      </div>
+    </div>
+  </div>
+</header>
+
+<nav class="navbar">
+  <div class="container"><div class="nav"><a href="index.html" class="">Home</a><a href="services.html" class="">Services</a><a href="shm_solutions.html" class="">SHM Solutions</a><a href="brochures-projects.html" class="">Brochures & Projects</a><a href="blogs-media.html" class="">Blogs & Media</a><a href="contact-us.html" class="">Contact us</a></div></div>
+</nav>
+
+<main>
+<section class="section">
+  <div class="container">
+    <div class="card">
+      <h2>Key Projects & Brochures </h2>
+     <!--<p style="color:var(--muted);margin-top:-6px;">Click a brochure image to download the PDF (replace the PDFs inside <b>/docs</b>).</p>-->
+      <div class="hr"></div>
+
+    <div class="card">
+      <div class="project-item">
+          <p style="font-size:25px; margin-bottom:5px;color:rgb(255, 230, 153);"><b>Structural Design Projects</b> <i>(Partial List)</i></p>
+          <div class="slideshow">
+            <img class="slide active" src="images/Project_SD/Project_SD_img00.png">
+            <img class="slide active" src="images/Project_SD/Project_SD_img01.png">
+            <img class="slide active" src="images/Project_SD/Project_SD_img02.png">
+            <img class="slide active" src="images/Project_SD/Project_SD_img03.png">
+            <img class="slide active" src="images/Project_SD/Project_SD_img04.png">
+            <img class="slide active" src="images/Project_SD/Project_SD_img05.png">
+            <img class="slide active" src="images/Project_SD/Project_SD_img06.png">
+            <img class="slide active" src="images/Project_SD/Project_SD_img07.png">
+            <img class="slide active" src="images/Project_SD/Project_SD_img08.png">
+            <img class="slide active" src="images/Project_SD/Project_SD_img09.png">
+            <img class="slide active" src="images/Project_SD/Project_SD_img10.png">
+            <img class="slide active" src="images/Project_SD/Project_SD_img11.png">
+            <img class="slide active" src="images/Project_SD/Project_SD_img12.png">
+            <img class="slide active" src="images/Project_SD/Project_SD_img13.png">
+            <img class="slide active" src="images/Project_SD/Project_SD_img14.png">
+            <img class="slide active" src="images/Project_SD/Project_SD_img15.png">
+            <img class="slide active" src="images/Project_SD/Project_SD_img16.png">
+            <img class="slide active" src="images/Project_SD/Project_SD_img17.png">
+            <img class="slide active" src="images/Project_SD/Project_SD_img18.png">
+            <img class="slide active" src="images/Project_SD/Project_SD_img19.png">
+            
+
+            <button class="prev">❮</button>
+            <button class="next">❯</button>
+
+          </div>
+        </div>
+
+
+
+    </div>
+
+    <div class="card">
+      <div class="project-item">
+          <p style="font-size:25px; margin-bottom:5px;color:rgb(255, 230, 153);"><b>Remedial Engineering Projects</b> <i>(Partial List)</i></p>
+          <div class="slideshow">
+            <img class="slide active" src="images\Project_RE\Project_RE_img00.png">
+            <img class="slide active" src="images\Project_RE\Project_RE_img01.png">
+            <img class="slide active" src="images\Project_RE\Project_RE_img02.png">
+            <img class="slide active" src="images\Project_RE\Project_RE_img03.png">
+            <img class="slide active" src="images\Project_RE\Project_RE_img04.png">
+            <img class="slide active" src="images\Project_RE\Project_RE_img05.png">
+            <img class="slide active" src="images\Project_RE\Project_RE_img06.png">
+            <img class="slide active" src="images\Project_RE\Project_RE_img07.png">
+            <img class="slide active" src="images\Project_RE\Project_RE_img08.png">
+            <img class="slide active" src="images\Project_RE\Project_RE_img09.png">
+            <img class="slide active" src="images\Project_RE\Project_RE_img10.png">
+            <img class="slide active" src="images\Project_RE\Project_RE_img11.png">
+            <img class="slide active" src="images\Project_RE\Project_RE_img12.png">
+            <img class="slide active" src="images\Project_RE\Project_RE_img13.png">            
+
+            <button class="prev">❮</button>
+            <button class="next">❯</button>
+          </div>
+      </div>
+    </div>
+    <!--Close of Remedial Engineering Section-->  
+    
+    <div class="card">
+      <div class="project-item">
+          <p style="font-size:25px; margin-bottom:5px;color:rgb(255, 230, 153);"><b>Structural Monitoring Projects</b> <i>(Partial List)</i></p>
+          <div class="slideshow">
+            <img class="slide active" src="images\Project_SM\Project_SM_img00.png">
+            <img class="slide active" src="images\Project_SM\Project_SM_img01.png">
+            <img class="slide active" src="images\Project_SM\Project_SM_img02.png">
+            <img class="slide active" src="images\Project_SM\Project_SM_img03.png">
+            <img class="slide active" src="images\Project_SM\Project_SM_img04.png">
+            <img class="slide active" src="images\Project_SM\Project_SM_img05.png">
+            <img class="slide active" src="images\Project_SM\Project_SM_img06.png">
+            <img class="slide active" src="images\Project_SM\Project_SM_img07.png">
+            <img class="slide active" src="images\Project_SM\Project_SM_img08.png">
+            <img class="slide active" src="images\Project_SM\Project_SM_img09.png">
+            <img class="slide active" src="images\Project_SM\Project_SM_img10.png">          
+
+            <button class="prev">❮</button>
+            <button class="next">❯</button>         
+          </div>
+      </div>
+    </div>
+    <!--Close of Structural Monitoring Section-->  
+
+    <div class="card">
+      <h2>Brochures </h2>
+      <div class="thumbgrid">
+        <a class="thumb" href="docs/SCMCES_Brochure_01.pdf" onclick="return popupwnd(this.href);" download>
+          <h3 style="margin:0 0 8px 0; font-size:16px; text-align:center; color:white">
+              Structural Design 
+          </h3>
+          <img src="images/SCMCES_Brochure_01.jpg" alt="Brochure 01">
+          <div class="cap">
+            <button class="download-btn">Download PDF</button>
+          </div>
+        </a>
+
+        <a class="thumb" href="docs/SCMCES_Brochure_02.pdf" onclick="return popupwnd(this.href);">
+          <h3 style="margin:0 0 8px 0; font-size:16px; text-align:center; color:white">
+              Remedial Engineering  
+          </h3>
+          <img src="images/SCMCES_Brochure_02.jpg" alt="Brochure 02">
+          <div class="cap">
+            <button class="download-btn">Download PDF</button>
+          </div>
+        </a>              
+
+        <a class="thumb" href="docs/SCMCES_Brochure_03.pdf" onclick="return popupwnd(this.href);">
+          <h3 style="margin:0 0 8px 0; font-size:16px; text-align:center; color:white">
+              Structural Monitoring 
+          </h3>
+          <img src="images/SCMCES_Brochure_03.jpg" alt="Brochure 03">
+          <div class="cap">
+            <button class="download-btn">Download PDF</button>
+          </div>
+        </a>
+      </div>
+
+    </div>
+
+    <!--Brochure Section End-->
+
+
+    <!--Previous Design for the grid view of Key Projects-->
+      <!--<div class="card"> 
+        <h2> Key Projects </h2>
+        <div class="hr"></div> 
+        <div class="grid3">
+
+        <div class="project-item">
+          <h3 style="text-align:center; margin-bottom:5px; color:white">Structural Design</h3>
+          <div class="slideshow">
+            <img class="slide active" src="images/Project_SD/Project_SD_img00.png">
+            <img class="slide active" src="images/Project_SD/Project_SD_img01.png">
+            <img class="slide active" src="images/Project_SD/Project_SD_img02.png">
+            <img class="slide active" src="images/Project_SD/Project_SD_img03.png">
+            <img class="slide active" src="images/Project_SD/Project_SD_img04.png">
+            <img class="slide active" src="images/Project_SD/Project_SD_img05.png">
+            <img class="slide active" src="images/Project_SD/Project_SD_img06.png">
+            <img class="slide active" src="images/Project_SD/Project_SD_img07.png">
+            <img class="slide active" src="images/Project_SD/Project_SD_img08.png">
+            <img class="slide active" src="images/Project_SD/Project_SD_img09.png">
+            <img class="slide active" src="images/Project_SD/Project_SD_img10.png">
+            <img class="slide active" src="images/Project_SD/Project_SD_img11.png">
+            <img class="slide active" src="images/Project_SD/Project_SD_img12.png">
+            <img class="slide active" src="images/Project_SD/Project_SD_img13.png">
+            <img class="slide active" src="images/Project_SD/Project_SD_img14.png">
+            <img class="slide active" src="images/Project_SD/Project_SD_img15.png">
+            <img class="slide active" src="images/Project_SD/Project_SD_img16.png">
+            <img class="slide active" src="images/Project_SD/Project_SD_img17.png">
+            <img class="slide active" src="images/Project_SD/Project_SD_img18.png">
+            <img class="slide active" src="images/Project_SD/Project_SD_img19.png">
+            
+
+            <button class="prev">❮</button>
+            <button class="next">❯</button>
+
+          </div>
+        </div>
+
+        <div class="project-item">
+          <h3 style="text-align:center; margin-bottom:5px; color:white">Remedial Engineering</h3>
+          <div class="slideshow">
+            <img class="slide active" src="images\Project_RE\Project_RE_img00.png">
+            <img class="slide active" src="images\Project_RE\Project_RE_img01.png">
+            <img class="slide active" src="images\Project_RE\Project_RE_img02.png">
+            <img class="slide active" src="images\Project_RE\Project_RE_img03.png">
+            <img class="slide active" src="images\Project_RE\Project_RE_img04.png">
+            <img class="slide active" src="images\Project_RE\Project_RE_img05.png">
+            <img class="slide active" src="images\Project_RE\Project_RE_img06.png">
+            <img class="slide active" src="images\Project_RE\Project_RE_img07.png">
+            <img class="slide active" src="images\Project_RE\Project_RE_img08.png">
+            <img class="slide active" src="images\Project_RE\Project_RE_img09.png">
+            <img class="slide active" src="images\Project_RE\Project_RE_img10.png">
+            <img class="slide active" src="images\Project_RE\Project_RE_img11.png">
+            <img class="slide active" src="images\Project_RE\Project_RE_img12.png">
+            <img class="slide active" src="images\Project_RE\Project_RE_img13.png">            
+
+            <button class="prev">❮</button>
+            <button class="next">❯</button>
+             
+          </div>
+        </div>
+
+        <div class="project-item">
+          <h3 style="text-align:center; margin-bottom:5px; color:white">Structural Monitoring</h3>
+          <div class="slideshow">
+            <img class="slide active" src="images\Project_SM\Project_SM_img00.png">
+            <img class="slide active" src="images\Project_SM\Project_SM_img01.png">
+            <img class="slide active" src="images\Project_SM\Project_SM_img02.png">
+            <img class="slide active" src="images\Project_SM\Project_SM_img03.png">
+            <img class="slide active" src="images\Project_SM\Project_SM_img04.png">
+            <img class="slide active" src="images\Project_SM\Project_SM_img05.png">
+            <img class="slide active" src="images\Project_SM\Project_SM_img06.png">
+            <img class="slide active" src="images\Project_SM\Project_SM_img07.png">
+            <img class="slide active" src="images\Project_SM\Project_SM_img08.png">
+            <img class="slide active" src="images\Project_SM\Project_SM_img09.png">
+            <img class="slide active" src="images\Project_SM\Project_SM_img10.png">          
+
+            <button class="prev">❮</button>
+            <button class="next">❯</button>
+
+          </div>
+        </div>
+
+      </div>-->
+
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="small">
+      <center>  © <span id="y"></span> SCMCES &nbsp;Email: <a href="mailto:scmces.consultants@gmail.com">scmces.consultants@gmail.com</a></center>
+      <div style="margin-top:6px;"> </div>
+    </div>
+  </div>
+</footer>
+<script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+<script src="nav-active.js"></script>
+
+<!--Pop up window script for download pdf functionality-->
+<script>
+function popupwnd(url) {
+  window.open(
+    url,
+    'popupWindow',
+    'width=800,height=600,scrollbars=yes,resizable=yes'
+  );
+  return false;
+}
+</script>
+
+</body>
+</html>

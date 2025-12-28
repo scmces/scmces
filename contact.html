@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact | SCMCES</title>
+<link href="images/01_SCMCES Company logo.png" rel="icon" sizes="3998x2187" type="image/png">
+<link rel="stylesheet" href="css/scmces_wwb20.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="container">
+    <div class="brandrow">
+      <div class="logo"><img src="images/01_SCMCES Company logo.png" alt="SCMCES Logo"></div>
+      <div class="title">
+        <h1  style="font-size: 35px">SCM Consultancy & Engineering Services (SCMCES)</h1>
+        <!--<div class="tag">Engineering Insight ✤ Monitoring Integrity ✤ Building Futures</div>-->
+       <!--<div style="margin-top:0.5px;"><img src="images/00_tagline.png" alt="Tagline" style="max-width:720px;width:100%;height:auto;"></div>-->
+      </div>
+    </div>
+  </div>
+</header>
+
+<nav class="navbar">
+  <div class="container"><div class="nav"><a href="index.html" class="">Home</a><a href="services.html" class="">Services</a><a href="shm_solutions.html" class="">SHM Solutions</a><a href="brochures-projects.html" class="">Brochures & Projects</a><a href="blogs-media.html" class="">Blogs & Media</a><a href="contact.html" class="">Contact</a></div></div>
+</nav>
+
+<main>
+<section class="section">
+  <div class="container">
+    <div class="grid2">
+      <div class="card">
+        <h2>Contact</h2>
+        <p><b style="color:var(--gold);">Email:</b> <a href="mailto:scmces.consultants@gmail.com">scmces.consultants@gmail.com</a></p>
+        <p><b style="color:var(--gold);">Website:</b> www.scmces.com</p>
+        <div class="hr"></div>
+        <h3>Subscribe</h3>
+        <p style="color:var(--muted);margin-top:-6px;">Subscribe & Get Notifications to Your Email</p>
+        <!--HTML placeholder. Replace with a WWB Form object if you want mail integration.-->  
+        <form id="subscribeForm" action="https://api.web3forms.com/submit" method="POST">
+
+          <!-- Web3Forms Access Key -->
+          <input type="hidden" name="access_key" value="8ded82c2-e6e8-4690-a21e-36876cd4d156">
+
+          <!-- Email Subject -->
+          <input type="hidden" name="subject" value="🔔 New Subscriber - SCMCES">
+
+          <div id="formFields" style="display:grid;gap:10px;">
+            <input type="text" name="name" placeholder="Your Name" required
+              style="padding:10px 12px;border-radius:12px;border:1px solid var(--line);
+              background:rgba(0,0,0,0.35);color:var(--text);">
+
+            <input type="email" name="email" placeholder="Email Address" required
+              style="padding:10px 12px;border-radius:12px;border:1px solid var(--line);
+              background:rgba(0,0,0,0.35);color:var(--text);">
+
+            <button class="btn" type="submit">Subscribe</button>
+          </div>
+
+          <!-- Thank You Message -->
+          <div id="thankYouMsg" style="
+              display:none;
+              padding:14px;
+              border-radius:12px;
+              background:rgba(76,175,80,0.15);
+              color:#4CAF50;
+              font-weight:600;
+              text-align:center;">
+            ✅ Thank you for subscribing!
+          </div>
+        </form>
+        
+      </div>
+      <div class="card">
+        <h2>Contact details</h2>
+        <p></p>
+        <h2>Location Map</h2>
+        <p style="color:var(--muted);margin-top:-6px;">Embedded Google Map iframe from your document.</p>
+        <div style="border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,0.12);">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d289.0290756526754!2d77.52346849639805!3d12.927235932249909!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3f002a028469%3A0x303d6d923419b89e!2sSCM%20CONSULTANCY%20%26%20ENGINEERING%20SERVICES%20%2B%20THE%20SACRED%20KARMIC%20GRACE%20CIRCLE!5e0!3m2!1sen!2sin!4v1766137265323!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="small">
+      <center>  © <span id="y"></span> SCMCES &nbsp;Email: <a href="mailto:scmces.consultants@gmail.com">scmces.consultants@gmail.com</a></center>
+      <div style="margin-top:6px;"> </div>
+    </div>
+  </div>
+</footer>
+<script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const form = document.getElementById("subscribeForm");
+  const formFields = document.getElementById("formFields");
+  const thankYouMsg = document.getElementById("thankYouMsg");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault(); // stop page reload
+
+    fetch(form.action, {
+      method: "POST",
+      body: new FormData(form)
+    })
+    .then(response => {
+      if (response.ok) {
+        formFields.style.display = "none";
+        thankYouMsg.style.display = "block";
+        form.reset();
+      } else {
+        alert("Subscription failed. Please try again.");
+      }
+    })
+    .catch(() => {
+      alert("Network error. Please try again.");
+    });
+  });
+
+});
+</script>
+<script src="nav-active.js"></script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home | SCMCES</title>
+<link href="images/01_SCMCES Company logo.png" rel="icon" sizes="3998x2187" type="image/png">
+<link rel="stylesheet" href="css/scmces_wwb20.css">
+<link rel="stylesheet" href="css/slideshow.css">
+</head>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  let slideIndex = 0;
+  const slides = document.querySelectorAll(".slideshow .slide");
+
+  function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove("active"));
+    slideIndex = (index + slides.length) % slides.length;
+    slides[slideIndex].classList.add("active");
+  }
+
+  function changeSlide(step) {
+    showSlide(slideIndex + step);
+  }
+
+  // Auto slide every 2 seconds
+  setInterval(() => {
+    changeSlide(1);
+  }, 2000);
+
+  // Initialize
+  showSlide(slideIndex);
+
+  // Expose to buttons
+  window.changeSlide = changeSlide;
+});
+</script>
+
+
+<body>
+<header style="margin:0; padding:0;">
+  <div class="container" style="margin:0; max-width:100%; padding:0;">
+    <div class="brandrow" style="margin:0; padding:0px 0;">
+      <img src="images/01_SCMCES_Company banner.png"
+           alt="SCMCES Logo"
+           style="width:100%; height:auto; display:block; margin:0; padding:0;">
+    </div>
+  </div>
+</header>
+
+<nav class="navbar">
+  <div class="container"><div class="nav"><a href="index.html" class="">Home</a><a href="services.html" class="">Services</a><a href="shm_solutions.html" class="">SHM Solutions</a><a href="brochures-projects.html" class="">Brochures & Projects</a><a href="blogs-media.html" class="">Blogs & Media</a><a href="contact-us.html" class="">Contact us</a></div></div>
+</nav>
+
+<main>
+<section class="section">
+  <div class="container">
+    <div class="card">
+      <h2>SCM Consultation & Engineering Services (SCMCES)</h2>
+      <div class="hr"></div>
+      <div class="grid2">
+        <div>          
+          <p>
+            SCMCES provides consultancy and engineering services for civil infrastructure. In addition to professional services, SCMCES also provides training, internship, and research support for civil engineers in areas related to structural analysis & design review, Structural Assessment, Non-Destructive Testing (NDT), Static/Dynamic load testing, Vibration assessment, Structural Health Monitoring (SHM), and remedial engineering using Advanced Rehabilitation Technologies (ART).
+          </p>
+          <div class="kpi">
+            <div class="k"><div class="n">Design</div><div class="t">Buildings, bridges, culverts, towers...<br><br><br>Read more...</div></div>
+            <div class="k"><div class="n">NDT</div><div class="t">Condition assessment & diagnostics...<br><br>Read more...</div></div>      
+            <div class="k"><div class="n">ART</div><div class="t">Retrofitting, Repair & <br> strengthening strategies...<br><br>Read more...</div></div>
+            <div class="k"><div class="n">SHM</div><div class="t">Sensor-based monitoring & interpretation...<br><br>Read more...</div></div>   
+          </div>
+          <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;">
+            <a class="btn" href="services.html">Explore Services</a>
+            <a class="btn" href="brochures-projects.html">Brochures & Projects</a>
+            <a class="btn" href="contact-us.html">Contact Us</a>
+          </div>
+        </div>
+        <div style="text-align:center;">
+          <img src="images/01_SCMCES_Department and Verticals.png"
+              alt="SCMCCES Verticals"
+              style="display:inline-block; margin:0 auto; border-radius:14px; border:1px solid rgba(255,255,255,0.12);">
+              “Engineering Insight ✤ Monitoring Integrity ✤ Building Futures”
+        </div>
+
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+      <div class="thumbgrid" style="margin-top:1px;">
+        <div class="thumb"><img src="images/01_SCMCES SERVICES_01.png" alt="STructural Design"><div class="cap"></div></div>
+        <div class="thumb"><img src="images/01_SCMCES SERVICES_02.png" alt="Remedial Engineering"><div class="cap"></div></div>
+        <div class="thumb"><img src="images/01_SCMCES SERVICES_03.png" alt="Structural Monitoring"><div class="cap"></div></div>
+      </div>    
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="small">
+    <center>  © <span id="y"></span> SCMCES &nbsp;Email: <a href="mailto:scmces.consultants@gmail.com">scmces.consultants@gmail.com</a></center>
+      <div style="margin-top:6px;"> </div>
+    </div>
+  </div>
+</footer>
+<script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+<script src="nav-active.js"></script>
+</body>
+</html>
