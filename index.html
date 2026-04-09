@@ -7,6 +7,28 @@
 <link href="images/01_SCMCES Company logo.png" rel="icon" sizes="3998x2187" type="image/png">
 <link rel="stylesheet" href="css/scmces_wwb20.css">
 <link rel="stylesheet" href="css/slideshow.css">
+<!-- ================= SECURITY HEADERS ================= -->
+
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="X-Frame-Options" content="DENY">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+
+<meta http-equiv="Content-Security-Policy" content="
+  default-src 'self';
+  img-src 'self' data: https:;
+  script-src 'self' https://www.youtube.com https://maps.googleapis.com https://www.googletagmanager.com;
+  style-src 'self' 'unsafe-inline';
+  font-src 'self' https:;
+  frame-src https://www.youtube.com https://www.google.com https://maps.google.com;
+  connect-src 'self' https://api.web3forms.com https://maps.googleapis.com;
+  form-action https://api.web3forms.com;
+  base-uri 'self';
+  object-src 'none';
+  frame-ancestors 'none';
+  upgrade-insecure-requests;
+">
+
+
 </head>
 <script>
 document.addEventListener("DOMContentLoaded", function () {
@@ -48,11 +70,64 @@ document.addEventListener("DOMContentLoaded", function () {
     </div>
   </div>
 </header>
-
 <nav class="navbar">
-  <img src="images/01_SCMCES_Company_Freeze_logo.png" alt="SCMCES Logo" class="navbar-logo">  
-  <div class="container">    
-    <div class="nav"><a href="index.html" class="">Home</a><a href="services.html" class="">Services</a><a href="shm_solutions.html" class="">SHM Solutions</a><a href="brochures-projects.html" class="">Brochures & Projects</a><a href="training.html" class="">Training</a><a href="blogs-media.html" class="">Blogs & Media</a><a href="contact-us.html" class="">Contact us</a></div></div>
+
+  <img src="images/01_SCMCES_Company_Freeze_logo.png"
+       alt="SCMCES Logo"
+       class="navbar-logo">
+
+  <div class="menu-toggle" id="menu-toggle">
+    ☰
+  </div>
+
+  <div class="container">
+    <div class="nav" id="nav-menu">  <!-- ✅ FIX HERE -->
+
+      <a href="index.html">Home</a>
+
+      <div class="dropdown">
+        <a href="services.html" class="dropbtn">Services ▾</a>
+        <div class="dropdown-content">
+          <a href="services.html#sdc">Structural Design</a>
+          <a href="services.html#re">Remedial Engineering</a>
+          <a href="services.html#sm">Structural Monitoring</a>
+          <a href="services.html#tr">Training</a>
+          <a href="services.html#rsd">R&D</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <a href="shm_solutions.html" class="dropbtn">SHM Solutions ▾</a>
+        <div class="dropdown-content">
+          <a href="shm_solutions.html#isr">Instrumentation Scheme Recommendation</a>
+          <a href="shm_solutions.html#sbm">Sensor-Based Monitoring</a>
+          <a href="shm_solutions.html#lts">Load Testing Services</a>
+          <a href="shm_solutions.html#slm">Short & Long-Term Monitoring</a>
+          <a href="shm_solutions.html#ssm">Site-Specific Measurement</a>
+          <a href="shm_solutions.html#ber">Bridge Evaluation & Rating</a>
+          <a href="shm_solutions.html#sca">Strain & Stress Cycle Assessment</a>
+          <a href="shm_solutions.html#fda">Fatigue Damage Assessment</a>
+          <a href="shm_solutions.html#rfe">Remaining Service Life Estimation</a>
+          <a href="shm_solutions.html#fna">FEA & Numerical Structural Assessment</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <a href="brochures-projects.html" class="dropbtn">Brochures & Projects ▾</a>
+        <div class="dropdown-content">
+          <a href="brochures-projects.html">Structural Design Projects</a>
+          <a href="brochures-projects.html#rep">Remedial Engineering Projects</a>
+          <a href="brochures-projects.html#smp">Structural Monitoring Projects</a>
+          <a href="brochures-projects.html#pb">Project Brochures</a>
+        </div>
+      </div>
+
+      <a href="training.html">Training</a>
+      <a href="blogs-media.html">Blogs & Media</a>
+      <a href="contact-us.html">Contact us</a>
+
+    </div>
+  </div>
 </nav>
 
 <main>
@@ -62,15 +137,15 @@ document.addEventListener("DOMContentLoaded", function () {
       <h2>SCM Consultation & Engineering Services (SCMCES)</h2>
       <div class="hr"></div>
       <div class="grid2">
-        <div>          
+        <div>
           <p>
             SCMCES provides consultancy and engineering services for civil infrastructure. In addition to professional services, SCMCES also provides training, internship, and research support for civil engineers in areas related to structural analysis & design review, Structural Assessment, Non-Destructive Testing (NDT), Static/Dynamic load testing, Vibration assessment, Structural Health Monitoring (SHM), and remedial engineering using Advanced Rehabilitation Technologies (ART).
           </p>
           <div class="kpi">
             <div class="k"><div class="n">Design</div><div class="t">Buildings, bridges, culverts, towers...<br><br><br>Read more...</div></div>
-            <div class="k"><div class="n">NDT</div><div class="t">Condition assessment & diagnostics...<br><br>Read more...</div></div>      
+            <div class="k"><div class="n">NDT</div><div class="t">Condition assessment & diagnostics...<br><br>Read more...</div></div>
             <div class="k"><div class="n">ART</div><div class="t">Retrofitting, Repair & <br> strengthening strategies...<br><br>Read more...</div></div>
-            <div class="k"><div class="n">SHM</div><div class="t">Sensor-based monitoring & interpretation...<br><br>Read more...</div></div>   
+            <div class="k"><div class="n">SHM</div><div class="t">Sensor-based monitoring & interpretation...<br><br>Read more...</div></div>
           </div>
           <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;">
             <a class="btn" href="services.html">Explore Services</a>
@@ -78,7 +153,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <a class="btn" href="contact-us.html">Contact Us</a>
           </div>
         </div>
-        <div style="text-align:center;">
+        <div class="zoom-img" style="text-align:center;">
           <img src="images/01_SCMCES_Department and Verticals.png"
               alt="SCMCCES Verticals"
               style="display:inline-block; margin:0 auto; border-radius:14px; border:1px solid rgba(255,255,255,0.12);">
@@ -94,10 +169,10 @@ document.addEventListener("DOMContentLoaded", function () {
 <section class="section">
   <div class="container">
       <div class="thumbgrid" style="margin-top:1px;">
-        <div class="thumb"><img src="images/01_SCMCES SERVICES_01.png" alt="STructural Design"><div class="cap"></div></div>
+        <div class="thumb"><img src="images/01_SCMCES SERVICES_01.png" alt="Structural Design"><div class="cap"></div></div>
         <div class="thumb"><img src="images/01_SCMCES SERVICES_02.png" alt="Remedial Engineering"><div class="cap"></div></div>
         <div class="thumb"><img src="images/01_SCMCES SERVICES_03.png" alt="Structural Monitoring"><div class="cap"></div></div>
-      </div>    
+      </div>
   </div>
 </section>
 </main>
@@ -112,5 +187,6 @@ document.addEventListener("DOMContentLoaded", function () {
 </footer>
 <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
 <script src="nav-active.js"></script>
+<script src="security.js"></script>
 </body>
 </html>

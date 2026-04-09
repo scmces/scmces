@@ -64,6 +64,76 @@ input,button{font-family:inherit}
   line-height: 1.4;
 }
 
+.card .section-card p {
+  margin-top: 0.2em;                     /* small space above paragraph */
+  font-size: clamp(12px, 2vw, 14px);     /* smaller responsive size */
+  line-height: 1.4;                       /* good readability */
+}
+
+/***** title heading *******/
+.title h1{
+  font-size: 35px;     /* desktop default */
+  line-height: 1.2;
+}
+
+/* Mobile optimization */
+@media (max-width: 768px){
+  .title h1{
+    font-size: 19px;   /* perfect for phones */
+    text-align: center;
+  }
+}
+/*****logo section*********/
+@media (max-width: 768px){
+
+  /* stack logo + title vertically */
+  .brandrow{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* center logo container */
+  .logo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 6px;
+  }
+
+  .logo img{
+    max-width: 180px;
+    height: auto;
+  }
+
+}
+/******end of title heading******/
+
+/****zooming on hovering the image******/
+/* Wrap-safe zoom effect */
+.zoom-img {
+  overflow: hidden;           /* prevents overflow on zoom */
+  border-radius: 14px;        /* optional: keeps rounded look */
+}
+
+.zoom-img img {
+  transition: transform 0.4s ease;
+  will-change: transform;
+}
+
+/* Hover zoom */
+.zoom-img:hover img {
+  transform: scale(1.08);     /* subtle professional zoom */
+}
+
+@media (max-width:768px){
+  .zoom-img:hover img{
+    transform:none;
+  }
+}
+
+/*****end of hovering image zoom effect *****/
 
 /**************** Download Button styling **************/
 
@@ -173,55 +243,74 @@ input,button{font-family:inherit}
    Mobile-only responsive behavior for SHM Solutions page
    =============================== */
 /* Hide mobile images by default */
-.mobile-img {
-  display: none;
-}
+
 
 /* Show only on mobile screens */
 /* SHM Solutions page - scoped only */
-@media (max-width: 768px) {
-  .shm-page .grid2 {
-    display: block;           /* stack columns vertically */
-    grid-template-columns: 1fr; /* single column */
-  }
+/* MOBILE: Show images after each card, hide desktop image grid */
+/* DESKTOP: Align text grid and image grid */
+/* DESKTOP: Grid layout */
+/* DESKTOP: Grid layout */
+.shm-page .grid2{
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
 
-  .shm-page .grid2 > div:last-child {
-    display: none;            /* hide right column if needed */
-  }
-
-  .shm-page .mobile-img {
-    display: block;
-    width: 100%;
-    margin: 15px 0;
-  }
-
-  .shm-page .mobile-img img {
-    width: 100%;
-    height: auto;
-    border-radius: 14px;
-    border: 1px solid rgba(255,255,255,0.12);
-  }
+/* Force equal width */
+.shm-page .grid2 > div{
+  flex: 1;   /* each column takes 50% */
 }
 
 
-@media (max-width: 768px) {
+/* Desktop image grid */
+.shm-page .image-grid{
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
 
-  /* override global hide rule ONLY for this section */
-  .show-img-mobile .grid2 > div:last-child {
-    display: block;
+/* Align first image */
+.shm-page .image-grid img:first-child{
+  margin-top: 22px;
+}
+
+.shm-page .image-grid img{
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Hide mobile images on desktop */
+.shm-page .card-img-mobile{
+  display: none;
+}
+
+/* MOBILE */
+@media (max-width: 768px){
+
+  .shm-page .grid2{
+    flex-direction: column;
   }
 
-  .show-img-mobile .grid2 {
-    display: block;
+  /* hide desktop column */
+  .shm-page .image-grid{
+    display: none;
   }
 
-  .show-img-mobile .grid2 img {
+  /* show mobile images */
+  .shm-page .card-img-mobile{
+    display: block;
+    margin: 12px 0;
+  }
+
+  .shm-page .card-img-mobile img{
     width: 100%;
     height: auto;
-    margin-top: 15px;
+    border-radius: 8px;
   }
-
 }
+
 
 /***********only for Services page *******/
 
@@ -430,4 +519,238 @@ input,button{font-family:inherit}
   }
 }
 
+/** nav bar submenu added for Services page ***/
+/*** THEME MATCHED SUBMENU ***/
 
+/* Dropdown container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Submenu box */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  background: rgba(0,0,0,0.85);
+  border: 1px solid var(--gold);
+  border-radius: 12px;
+  min-width: 240px;
+
+  padding: 2px;   /* reduced from 6px */
+
+  box-shadow: var(--shadow);
+  z-index: 999;
+}
+
+/* Submenu links */
+.dropdown-content a {  
+  display: block;
+  background: var(--panel);
+
+  padding: 5px 12px;   /* tighter vertical spacing */
+
+  border-radius: 6px; /* slightly smaller for cleaner look */
+
+  color: var(--text);
+  font-size: 14px;
+  text-decoration: none;
+  line-height: 1.3;   /* prevents tall rows */
+
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+
+/* Hover effects */
+.dropdown-content a:hover {
+  background: rgba(0,0,0,0.85);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.35);
+  color: var(--gold);
+}
+
+/* Show submenu */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Main button */
+.dropbtn {
+  cursor: pointer;
+}
+
+
+
+
+
+/**** Three buttons added for scmces services *****/
+/* Sticky container */
+/* Sticky container */
+/* Sticky container */
+#btnconatiner{
+  position: sticky;
+  top: 70px;
+  z-index: 9998;
+  display: flex;
+  justify-content: center;
+}
+
+/* Button bar */
+#servicebtn {
+  display: flex;
+  gap: 6px;
+  justify-content: center;   /* center buttons horizontally */
+  align-items: center;
+
+  background: rgba(0,0,0,0.75);
+  padding: clamp(8px, 1vw, 12px); /* auto/responsive padding */
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+
+/* Desktop */
+@media(min-width:769px){
+  #servicebtn{
+    flex-direction: row; /* horizontal */
+  }
+
+  .btn-head{
+    flex: auto;
+  }
+
+  .btn{
+    font-size: 14px;
+    padding: 6px 3px;
+    width: auto;
+  }
+}
+
+/* Mobile - vertical stacked buttons */
+@media(max-width:768px){
+
+  #btnconatiner{
+    top: 180px; /* adjust for navbar */
+  }
+
+  #servicebtn{
+    flex-direction: column; /* vertical */
+    gap: 8px;               /* space between buttons */
+    padding: 8px;
+  }
+
+  .btn-head{
+    width: 80%;             /* full width */
+  }
+
+  .btn{
+  width:75%;
+  font-size:10px;
+  padding:8px 6px;
+  line-height:1.2;
+  text-align:center;
+  white-space:normal;
+  word-break:break-word;
+
+  display:block;
+  margin: 0 auto;   /* 👈 centers horizontally */
+}
+
+}
+
+
+/* Fix anchor scroll for sticky navbar */
+/* Anchor fix for sticky navbar */
+h2[id],
+h3[id],
+p[id]{
+  scroll-margin-top: 150px;
+  position: relative;
+}
+
+
+
+/*added hamburger sidebar for navigation mobile view*/
+/* ===== MOBILE SIDEBAR FIX ===== */
+/* ===== FINAL MOBILE SIDEBAR ===== */
+
+/* Hide hamburger by default (desktop) */
+.menu-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+
+  /* Hamburger (ALWAYS visible) */
+  .menu-toggle {
+    position: fixed;
+    top: 12px;
+    right: 15px;
+    font-size: 26px;
+    cursor: pointer;
+    z-index: 11000;
+    display: block;
+  }
+
+  /* Sidebar (hidden OFFSCREEN, not display:none) */
+  .nav {
+    position: fixed;
+    top: 0;
+    left: -260px;   /* 👈 hidden */
+    width: 250px;
+    height: 100%;
+    background: #111;
+    flex-direction: column;
+    padding-top: 60px;
+    transition: 0.3s ease;
+    z-index: 10000;
+  }
+
+  /* Show sidebar */
+  .nav.active {
+    left: 0;
+  }
+
+  /* Links styling */
+  .nav a,
+  .dropdown .dropbtn {
+    display: block;
+    padding: 12px 20px;
+    color: #fff;
+  }
+
+}@media (max-width: 768px) {
+
+  /* Hide top navbar links */
+  .nav {
+    display: none !important;
+  }
+
+  /* Show hamburger */
+  .menu-toggle {
+    position: fixed;   /* keep it always visible */
+    top: 10px;
+    right: 10px;       /* 👈 move to RIGHT */
+    left: auto !important;        /* 👈 reset left */
+    font-size: 26px;
+    cursor: pointer;
+    z-index: 11000;
+    display: block;
+  }
+
+  /* Sidebar */
+  .nav.active {
+    display: flex !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background: #111;
+    flex-direction: column;
+    padding-top: 60px;
+    z-index: 9999;
+  }
+}

@@ -6,6 +6,27 @@
 <title>Contact | SCMCES</title>
 <link href="images/01_SCMCES Company logo.png" rel="icon" sizes="3998x2187" type="image/png">
 <link rel="stylesheet" href="css/scmces_wwb20.css">
+<!-- ================= SECURITY HEADERS ================= -->
+
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="X-Frame-Options" content="DENY">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+
+<meta http-equiv="Content-Security-Policy" content="
+  default-src 'self';
+  img-src 'self' data: https:;
+  script-src 'self' https://www.youtube.com https://maps.googleapis.com https://www.googletagmanager.com;
+  style-src 'self' 'unsafe-inline';
+  font-src 'self' https:;
+  frame-src https://www.youtube.com https://www.google.com https://maps.google.com;
+  connect-src 'self' https://api.web3forms.com https://maps.googleapis.com;
+  form-action https://api.web3forms.com;
+  base-uri 'self';
+  object-src 'none';
+  frame-ancestors 'none';
+  upgrade-insecure-requests;
+">
+
 </head>
 <body>
 <header class="topbar">
@@ -21,11 +42,67 @@
   </div>
 </header>
 
+
 <nav class="navbar">
-  <img src="images/01_SCMCES_Company_Freeze_logo.png" alt="SCMCES Logo" class="navbar-logo">  
-  <div class="container">    
-    <div class="nav"><a href="index.html" class="">Home</a><a href="services.html" class="">Services</a><a href="shm_solutions.html" class="">SHM Solutions</a><a href="brochures-projects.html" class="">Brochures & Projects</a><a href="training.html" class="">Training</a><a href="blogs-media.html" class="">Blogs & Media</a><a href="contact-us.html" class="">Contact us</a></div></div>
+
+  <img src="images/01_SCMCES_Company_Freeze_logo.png"
+       alt="SCMCES Logo"
+       class="navbar-logo">
+
+  <div class="menu-toggle" id="menu-toggle">
+    ☰
+  </div>
+
+  <div class="container">
+    <div class="nav" id="nav-menu">  <!-- ✅ FIX HERE -->
+
+      <a href="index.html">Home</a>
+
+      <div class="dropdown">
+        <a href="services.html" class="dropbtn">Services ▾</a>
+        <div class="dropdown-content">
+          <a href="services.html#sdc">Structural Design</a>
+          <a href="services.html#re">Remedial Engineering</a>
+          <a href="services.html#sm">Structural Monitoring</a>
+          <a href="services.html#tr">Training</a>
+          <a href="services.html#rsd">R&D</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <a href="shm_solutions.html" class="dropbtn">SHM Solutions ▾</a>
+        <div class="dropdown-content">
+          <a href="shm_solutions.html#isr">Instrumentation Scheme Recommendation</a>
+          <a href="shm_solutions.html#sbm">Sensor-Based Monitoring</a>
+          <a href="shm_solutions.html#lts">Load Testing Services</a>
+          <a href="shm_solutions.html#slm">Short & Long-Term Monitoring</a>
+          <a href="shm_solutions.html#ssm">Site-Specific Measurement</a>
+          <a href="shm_solutions.html#ber">Bridge Evaluation & Rating</a>
+          <a href="shm_solutions.html#sca">Strain & Stress Cycle Assessment</a>
+          <a href="shm_solutions.html#fda">Fatigue Damage Assessment</a>
+          <a href="shm_solutions.html#rfe">Remaining Service Life Estimation</a>
+          <a href="shm_solutions.html#fna">FEA & Numerical Structural Assessment</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <a href="brochures-projects.html" class="dropbtn">Brochures & Projects ▾</a>
+        <div class="dropdown-content">
+          <a href="brochures-projects.html">Structural Design Projects</a>
+          <a href="brochures-projects.html#rep">Remedial Engineering Projects</a>
+          <a href="brochures-projects.html#smp">Structural Monitoring Projects</a>
+          <a href="brochures-projects.html#pb">Project Brochures</a>
+        </div>
+      </div>
+
+      <a href="training.html">Training</a>
+      <a href="blogs-media.html">Blogs & Media</a>
+      <a href="contact-us.html">Contact us</a>
+
+    </div>
+  </div>
 </nav>
+
 
 <main>
 <section class="section">
@@ -127,5 +204,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 <script src="nav-active.js"></script>
+<script src="security.js"></script>
 </body>
 </html>

@@ -7,42 +7,28 @@
 <link href="images/01_SCMCES Company logo.png" rel="icon" sizes="3998x2187" type="image/png">
 <link rel="stylesheet" href="css/scmces_wwb20.css">
 <link rel="stylesheet" href="css/slideshow.css">
+<!-- ================= SECURITY HEADERS ================= -->
+
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="X-Frame-Options" content="DENY">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+
+<meta http-equiv="Content-Security-Policy" content="
+  default-src 'self';
+  img-src 'self' data: https:;
+  script-src 'self' https://www.youtube.com https://maps.googleapis.com https://www.googletagmanager.com;
+  style-src 'self' 'unsafe-inline';
+  font-src 'self' https:;
+  frame-src https://www.youtube.com https://www.google.com https://maps.google.com;
+  connect-src 'self' https://api.web3forms.com https://maps.googleapis.com;
+  form-action https://api.web3forms.com;
+  base-uri 'self';
+  object-src 'none';
+  frame-ancestors 'none';
+  upgrade-insecure-requests;
+">
+
 </head>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-
-  document.querySelectorAll(".slideshow").forEach((slideshow) => {
-
-    let index = 0;
-    const slides = slideshow.querySelectorAll(".slide");
-
-    function showSlide(i) {
-      slides.forEach(slide => slide.classList.remove("active"));
-      index = (i + slides.length) % slides.length;
-      slides[index].classList.add("active");
-    }
-
-    // Auto-play (every 3 seconds)
-    setInterval(() => {
-      showSlide(index + 1);
-    }, 2000);
-
-    // Button controls (only for this slideshow)
-    slideshow.querySelector(".prev").addEventListener("click", () => {
-      showSlide(index - 1);
-    });
-
-    slideshow.querySelector(".next").addEventListener("click", () => {
-      showSlide(index + 1);
-    });
-
-    // Initialize
-    showSlide(index);
-
-  });
-
-});
-</script>
 
 <body>
 <header class="topbar">
@@ -58,23 +44,79 @@ document.addEventListener("DOMContentLoaded", function () {
   </div>
 </header>
 
+
 <nav class="navbar">
-  <img src="images/01_SCMCES_Company_Freeze_logo.png" alt="SCMCES Logo" class="navbar-logo">  
-  <div class="container">    
-    <div class="nav"><a href="index.html" class="">Home</a><a href="services.html" class="">Services</a><a href="shm_solutions.html" class="">SHM Solutions</a><a href="brochures-projects.html" class="">Brochures & Projects</a><a href="training.html" class="">Training</a><a href="blogs-media.html" class="">Blogs & Media</a><a href="contact-us.html" class="">Contact us</a></div></div>
+
+  <img src="images/01_SCMCES_Company_Freeze_logo.png"
+       alt="SCMCES Logo"
+       class="navbar-logo">
+
+  <div class="menu-toggle" id="menu-toggle">
+    ☰
+  </div>
+
+  <div class="container">
+    <div class="nav" id="nav-menu">  <!-- ✅ FIX HERE -->
+
+      <a href="index.html">Home</a>
+
+      <div class="dropdown">
+        <a href="services.html" class="dropbtn">Services ▾</a>
+        <div class="dropdown-content">
+          <a href="services.html#sdc">Structural Design</a>
+          <a href="services.html#re">Remedial Engineering</a>
+          <a href="services.html#sm">Structural Monitoring</a>
+          <a href="services.html#tr">Training</a>
+          <a href="services.html#rsd">R&D</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <a href="shm_solutions.html" class="dropbtn">SHM Solutions ▾</a>
+        <div class="dropdown-content">
+          <a href="shm_solutions.html#isr">Instrumentation Scheme Recommendation</a>
+          <a href="shm_solutions.html#sbm">Sensor-Based Monitoring</a>
+          <a href="shm_solutions.html#lts">Load Testing Services</a>
+          <a href="shm_solutions.html#slm">Short & Long-Term Monitoring</a>
+          <a href="shm_solutions.html#ssm">Site-Specific Measurement</a>
+          <a href="shm_solutions.html#ber">Bridge Evaluation & Rating</a>
+          <a href="shm_solutions.html#sca">Strain & Stress Cycle Assessment</a>
+          <a href="shm_solutions.html#fda">Fatigue Damage Assessment</a>
+          <a href="shm_solutions.html#rfe">Remaining Service Life Estimation</a>
+          <a href="shm_solutions.html#fna">FEA & Numerical Structural Assessment</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <a href="brochures-projects.html" class="dropbtn">Brochures & Projects ▾</a>
+        <div class="dropdown-content">
+          <a href="brochures-projects.html">Structural Design Projects</a>
+          <a href="brochures-projects.html#rep">Remedial Engineering Projects</a>
+          <a href="brochures-projects.html#smp">Structural Monitoring Projects</a>
+          <a href="brochures-projects.html#pb">Project Brochures</a>
+        </div>
+      </div>
+
+      <a href="training.html">Training</a>
+      <a href="blogs-media.html">Blogs & Media</a>
+      <a href="contact-us.html">Contact us</a>
+
+    </div>
+  </div>
 </nav>
+
 
 <main>
 <section class="section">
+  <!--BUTTON CONTAINER FOR OUR 3 SERVICES HEADING WITH LINK-->  
   <div class="container">
     <div class="card">
       <h2>Key Projects & Brochures </h2>
      <!--<p style="color:var(--muted);margin-top:-6px;">Click a brochure image to download the PDF (replace the PDFs inside <b>/docs</b>).</p>-->
       <div class="hr"></div>
-
     <div class="card">
       <div class="project-item">
-          <p style="font-size:25px; margin-bottom:5px;color:rgb(255, 230, 153);"><b>Structural Design Projects</b> <i>(Partial List)</i></p>
+          <p style="font-size:25px; margin-bottom:5px;color:rgb(255, 230, 153);" id="sdp"><b>Structural Design Projects</b> <i>(Partial List)</i></p>
           <div class="slideshow">
             <img class="slide active" src="images/Project_SD/Project_SD_img00.png">
             <img class="slide active" src="images/Project_SD/Project_SD_img01.png">
@@ -110,7 +152,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     <div class="card">
       <div class="project-item">
-          <p style="font-size:25px; margin-bottom:5px;color:rgb(255, 230, 153);"><b>Remedial Engineering Projects</b> <i>(Partial List)</i></p>
+          <p style="font-size:25px; margin-bottom:5px;color:rgb(255, 230, 153);"id="rep"><b>Remedial Engineering Projects</b> <i>(Partial List)</i></p>
           <div class="slideshow">
             <img class="slide active" src="images\Project_RE\Project_RE_img00.png">
             <img class="slide active" src="images\Project_RE\Project_RE_img01.png">
@@ -136,7 +178,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
     <div class="card">
       <div class="project-item">
-          <p style="font-size:25px; margin-bottom:5px;color:rgb(255, 230, 153);"><b>Structural Monitoring Projects</b> <i>(Partial List)</i></p>
+          <p style="font-size:25px; margin-bottom:5px;color:rgb(255, 230, 153);" id="smp"><b>Structural Monitoring Projects</b> <i>(Partial List)</i></p>
           <div class="slideshow">
             <img class="slide active" src="images\Project_SM\Project_SM_img00.png">
             <img class="slide active" src="images\Project_SM\Project_SM_img01.png">
@@ -158,7 +200,7 @@ document.addEventListener("DOMContentLoaded", function () {
     <!--Close of Structural Monitoring Section-->  
 
     <div class="card">
-      <h2>Brochures </h2>
+      <h2 id="pb">Brochures </h2>
       <div class="thumbgrid">
         <a class="thumb" href="docs/SCMCES_Brochure_01.pdf" onclick="return popupwnd(this.href);" download>
           <h3 style="margin:0 0 8px 0; font-size:16px; text-align:center; color:white">
@@ -193,93 +235,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     </div>
 
-    <!--Brochure Section End-->
-
-
-    <!--Previous Design for the grid view of Key Projects-->
-      <!--<div class="card"> 
-        <h2> Key Projects </h2>
-        <div class="hr"></div> 
-        <div class="grid3">
-
-        <div class="project-item">
-          <h3 style="text-align:center; margin-bottom:5px; color:white">Structural Design</h3>
-          <div class="slideshow">
-            <img class="slide active" src="images/Project_SD/Project_SD_img00.png">
-            <img class="slide active" src="images/Project_SD/Project_SD_img01.png">
-            <img class="slide active" src="images/Project_SD/Project_SD_img02.png">
-            <img class="slide active" src="images/Project_SD/Project_SD_img03.png">
-            <img class="slide active" src="images/Project_SD/Project_SD_img04.png">
-            <img class="slide active" src="images/Project_SD/Project_SD_img05.png">
-            <img class="slide active" src="images/Project_SD/Project_SD_img06.png">
-            <img class="slide active" src="images/Project_SD/Project_SD_img07.png">
-            <img class="slide active" src="images/Project_SD/Project_SD_img08.png">
-            <img class="slide active" src="images/Project_SD/Project_SD_img09.png">
-            <img class="slide active" src="images/Project_SD/Project_SD_img10.png">
-            <img class="slide active" src="images/Project_SD/Project_SD_img11.png">
-            <img class="slide active" src="images/Project_SD/Project_SD_img12.png">
-            <img class="slide active" src="images/Project_SD/Project_SD_img13.png">
-            <img class="slide active" src="images/Project_SD/Project_SD_img14.png">
-            <img class="slide active" src="images/Project_SD/Project_SD_img15.png">
-            <img class="slide active" src="images/Project_SD/Project_SD_img16.png">
-            <img class="slide active" src="images/Project_SD/Project_SD_img17.png">
-            <img class="slide active" src="images/Project_SD/Project_SD_img18.png">
-            <img class="slide active" src="images/Project_SD/Project_SD_img19.png">
-            
-
-            <button class="prev">❮</button>
-            <button class="next">❯</button>
-
-          </div>
-        </div>
-
-        <div class="project-item">
-          <h3 style="text-align:center; margin-bottom:5px; color:white">Remedial Engineering</h3>
-          <div class="slideshow">
-            <img class="slide active" src="images\Project_RE\Project_RE_img00.png">
-            <img class="slide active" src="images\Project_RE\Project_RE_img01.png">
-            <img class="slide active" src="images\Project_RE\Project_RE_img02.png">
-            <img class="slide active" src="images\Project_RE\Project_RE_img03.png">
-            <img class="slide active" src="images\Project_RE\Project_RE_img04.png">
-            <img class="slide active" src="images\Project_RE\Project_RE_img05.png">
-            <img class="slide active" src="images\Project_RE\Project_RE_img06.png">
-            <img class="slide active" src="images\Project_RE\Project_RE_img07.png">
-            <img class="slide active" src="images\Project_RE\Project_RE_img08.png">
-            <img class="slide active" src="images\Project_RE\Project_RE_img09.png">
-            <img class="slide active" src="images\Project_RE\Project_RE_img10.png">
-            <img class="slide active" src="images\Project_RE\Project_RE_img11.png">
-            <img class="slide active" src="images\Project_RE\Project_RE_img12.png">
-            <img class="slide active" src="images\Project_RE\Project_RE_img13.png">            
-
-            <button class="prev">❮</button>
-            <button class="next">❯</button>
-             
-          </div>
-        </div>
-
-        <div class="project-item">
-          <h3 style="text-align:center; margin-bottom:5px; color:white">Structural Monitoring</h3>
-          <div class="slideshow">
-            <img class="slide active" src="images\Project_SM\Project_SM_img00.png">
-            <img class="slide active" src="images\Project_SM\Project_SM_img01.png">
-            <img class="slide active" src="images\Project_SM\Project_SM_img02.png">
-            <img class="slide active" src="images\Project_SM\Project_SM_img03.png">
-            <img class="slide active" src="images\Project_SM\Project_SM_img04.png">
-            <img class="slide active" src="images\Project_SM\Project_SM_img05.png">
-            <img class="slide active" src="images\Project_SM\Project_SM_img06.png">
-            <img class="slide active" src="images\Project_SM\Project_SM_img07.png">
-            <img class="slide active" src="images\Project_SM\Project_SM_img08.png">
-            <img class="slide active" src="images\Project_SM\Project_SM_img09.png">
-            <img class="slide active" src="images\Project_SM\Project_SM_img10.png">          
-
-            <button class="prev">❮</button>
-            <button class="next">❯</button>
-
-          </div>
-        </div>
-
-      </div>-->
-
     </div>
   </div>
 </section>
@@ -288,13 +243,16 @@ document.addEventListener("DOMContentLoaded", function () {
 <footer class="footer">
   <div class="container">
     <div class="small">
-      <center>  © <span id="y"></span> SCMCES &nbsp;Email: <a href="mailto:scmces.consultants@gmail.com">scmces.consultants@gmail.com</a></center>
+    <center>  © <span id="y"></span> SCMCES &nbsp;Email: <a href="mailto:scmces.consultants@gmail.com">scmces.consultants@gmail.com</a></center>
       <div style="margin-top:6px;"> </div>
     </div>
   </div>
 </footer>
 <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+<script src="js/slideshow.js"></script>
+<script src="include.js"></script>
 <script src="nav-active.js"></script>
+<script src="security.js"></script>
 
 <!--Pop up window script for download pdf functionality-->
 <script>

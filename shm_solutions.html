@@ -6,6 +6,27 @@
 <title>SHM Solutions | SCMCES</title>
 <link href="images/01_SCMCES Company logo.png" rel="icon" sizes="3998x2187" type="image/png">
 <link rel="stylesheet" href="css/scmces_wwb20.css">
+<!-- ================= SECURITY HEADERS ================= -->
+
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="X-Frame-Options" content="DENY">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+
+<meta http-equiv="Content-Security-Policy" content="
+  default-src 'self';
+  img-src 'self' data: https:;
+  script-src 'self' https://www.youtube.com https://maps.googleapis.com https://www.googletagmanager.com;
+  style-src 'self' 'unsafe-inline';
+  font-src 'self' https:;
+  frame-src https://www.youtube.com https://www.google.com https://maps.google.com;
+  connect-src 'self' https://api.web3forms.com https://maps.googleapis.com;
+  form-action https://api.web3forms.com;
+  base-uri 'self';
+  object-src 'none';
+  frame-ancestors 'none';
+  upgrade-insecure-requests;
+">
+
 </head>
 
 <body class="shm-page">
@@ -22,208 +43,343 @@
   </div>
 </header>
 
+
 <nav class="navbar">
-  <img src="images/01_SCMCES_Company_Freeze_logo.png" alt="SCMCES Logo" class="navbar-logo">  
-  <div class="container">    
-    <div class="nav"><a href="index.html" class="">Home</a><a href="services.html" class="">Services</a><a href="shm_solutions.html" class="">SHM Solutions</a><a href="brochures-projects.html" class="">Brochures & Projects</a><a href="training.html" class="">Training</a><a href="blogs-media.html" class="">Blogs & Media</a><a href="contact-us.html" class="">Contact us</a></div></div>
+
+  <img src="images/01_SCMCES_Company_Freeze_logo.png"
+       alt="SCMCES Logo"
+       class="navbar-logo">
+
+  <div class="menu-toggle" id="menu-toggle">
+    ☰
+  </div>
+
+  <div class="container">
+    <div class="nav" id="nav-menu">  <!-- ✅ FIX HERE -->
+
+      <a href="index.html">Home</a>
+
+      <div class="dropdown">
+        <a href="services.html" class="dropbtn">Services ▾</a>
+        <div class="dropdown-content">
+          <a href="services.html#sdc">Structural Design</a>
+          <a href="services.html#re">Remedial Engineering</a>
+          <a href="services.html#sm">Structural Monitoring</a>
+          <a href="services.html#tr">Training</a>
+          <a href="services.html#rsd">R&D</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <a href="shm_solutions.html" class="dropbtn">SHM Solutions ▾</a>
+        <div class="dropdown-content">
+          <a href="shm_solutions.html#isr">Instrumentation Scheme Recommendation</a>
+          <a href="shm_solutions.html#sbm">Sensor-Based Monitoring</a>
+          <a href="shm_solutions.html#lts">Load Testing Services</a>
+          <a href="shm_solutions.html#slm">Short & Long-Term Monitoring</a>
+          <a href="shm_solutions.html#ssm">Site-Specific Measurement</a>
+          <a href="shm_solutions.html#ber">Bridge Evaluation & Rating</a>
+          <a href="shm_solutions.html#sca">Strain & Stress Cycle Assessment</a>
+          <a href="shm_solutions.html#fda">Fatigue Damage Assessment</a>
+          <a href="shm_solutions.html#rfe">Remaining Service Life Estimation</a>
+          <a href="shm_solutions.html#fna">FEA & Numerical Structural Assessment</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <a href="brochures-projects.html" class="dropbtn">Brochures & Projects ▾</a>
+        <div class="dropdown-content">
+          <a href="brochures-projects.html">Structural Design Projects</a>
+          <a href="brochures-projects.html#rep">Remedial Engineering Projects</a>
+          <a href="brochures-projects.html#smp">Structural Monitoring Projects</a>
+          <a href="brochures-projects.html#pb">Project Brochures</a>
+        </div>
+      </div>
+
+      <a href="training.html">Training</a>
+      <a href="blogs-media.html">Blogs & Media</a>
+      <a href="contact-us.html">Contact us</a>
+
+    </div>
+  </div>
 </nav>
 
+
 <main>
+  
 <section class="section">
   <div class="container">
-    <div class="card">
-      <h2>SCMCES - Structural Health Monitoring (SHM) Solutions</h2>
-      <p>✤ Protecting sensitive infrastructure. ✤ Extending service life. ✤</p>
-      <!--<p>Core services are structured to support investigation, decision-making, and implementation—across design, assessment, rehabilitation and monitoring.</p>-->
-      <div class="hr"></div>
+
+    <!-- MAIN CARD (INTRO + GRIDS) -->
+    <div class="card main-card">
+
+      <!-- INTRO TEXT -->
+      <h2>SCMCES – Structural Health Monitoring (SHM) Services</h2>
+      <p class="tagline">
+        Protecting Sensitive Infrastructure | Extending Service Life
+      </p>
+      <p>
+        SCMCES provides engineering-driven, sensor-based Structural Health Monitoring (SHM) consultancy services to asset owners, consultants, EPC contractors, and authorities.
+      </p>
+
+      <!-- TWO GRID LAYOUT -->
       <div class="grid2">
-        <div>
-          <h3>Structural Measurement & SHM (Sensor-based)</h3>
-          <ul class="list"><li>Recommend instrumentation scheme for Structural health monitoring</li>
-            <li>Monitoring and measurement of structural and ambient parameters using sensor technology</li>
-            <li>Load testing (static and dynamic)</li>
-            <li>Short term & long term monitoring</li>
-            <li>Site specific live load estimation</li>
-            <li>Behavioral testing Bridge evaluation and rating Field testing / strain gauging to determine site and structure specific stress cycle information</li>
-            <li>Assessment of fatigue damage</li>
-            <li>Remaining life estimation.</li>
-            <li>Analytical structural assessment including finite element analysis</li>
-            <li>Training on Structural Health Monitoring (SHM) application to civil infrastructure</li></ul>
-          <div class="hr"></div>          
-          <h3>Operational Modal Analysis (OMA)</h3>
-          <p>
-            Where controlled excitation is difficult, OMA uses ambient/operational vibrations to estimate modal parameters (natural frequencies, mode shapes, damping)
-            and track changes for condition assessment.
-          </p>
-          <div class="hr"></div>
-          <div class="mobile-img"><img src="images/SHM_Solution_img01.png" alt="Services"></div>
-          <h2>Structural Health Monitoring (SHM) Services</h2>
-          <p>
-            <b>SCMCES provides advanced Structural Health Monitoring (SHM) services</b> to help asset owners, consultants, and authorities <b> monitor, assess, and extend the service life </b> of civil infrastructure such as <b> bridges, buildings, industrial structures, and critical facilities.</b>
-          <br><br>
-          Our SHM solutions combine sensor technology, field testing, data analytics, and engineering judgment to deliver reliable, decision-oriented insights—not just raw data.
-          </p>
-          <div class="hr"></div>   
-          <div class="mobile-img"><img src="images/SHM_Solution_img02.png" alt="Services"></div>       
-          <h3>Why Structural Health Monitoring Is Essential</h3>
-          <p>Civil infrastructure is increasingly subjected to:</p>
+
+        <!-- TEXT CARDS -->
+        <div class="text-grid">
+
+          <!-- CARD 1 -->
+          <div class="card section-card" >            
+            <h3 id="isr">Instrumentation Scheme Recommendation for Structural Health Monitoring</h3>
+            <p><b>SHM System Planning & Design Consultancy</b></p>
+            <p>SCMCES provides vendor-neutral instrumentation planning services tailored to the structural system, loading environment, and monitoring objectives.</p>
+            <p><b>Scope of Service:</b></p>
             <ul class="list">
-              <li>Aging and material degradation</li>
-              <li>Heavy traffic and changing live loads</li>
-              <li>Machine-induced and environmental vibrations</li>
-              <li>Seismic activity and extreme weather</li>
+              <li>Identification of critical structural components and responses</li>
+              <li>Selection of appropriate sensor types and specifications</li>
+              <li>Optimal sensor locations based on structural behaviour</li>
+              <li>Monitoring objectives definition (safety, serviceability, fatigue, durability)</li>
+              <li>Short-term vs long-term monitoring strategy</li>
+              <li>Data acquisition, communication, and storage architecture</li>
+              <li>Integration with inspection and maintenance plans</li>
             </ul>
-            <p>Structural Health Monitoring enables early detection of performance issues, reduction of unexpected failures, and optimization of maintenance and rehabilitation strategies—making it a critical tool for modern infrastructure management.</p>
-          <div class="hr"></div>
-          <div class="mobile-img"><img src="images/SHM_Solution_img03.png" alt="Services"></div>
-          <h3>Our Structural Health Monitoring Solutions</h3>
-          <p><b>Bridge Monitoring Services</b></p>      
-          <p>We offer <b> Bridge Structural Health Monitoring </b> solutions for:</p>
-          <ul class="list">
+            <p><b>Deliverables:</b></p>
+            <ul class="list">
+              <li>Instrumentation layout drawings</li>
+              <li>Sensor quantity and specification matrix</li>
+              <li>Monitoring philosophy document</li>
+              <li>Budget-level and execution-level BoQs</li>
+            </ul>
+          </div>
+          <div class="card-img-mobile">
+            <img src="images/SHM_Solution_img01.png" alt="Image 1">
+          </div>
+
+          <!-- CARD 2 -->
+          <div class="card section-card">            
+            <h3 id="sbm">Sensor-Based Monitoring of Structural & Ambient Parameters</h3>
+            <p><b>Structural Measurement Services</b></p>
+            <p>We design and implement sensor-based measurement systems to capture real structural and environmental behaviour under actual operating conditions.</p>
+            <p><b>Measured Parameters:</b></p>
+            <ul class="list">
+              <li>Acceleration and vibration response</li>
+              <li>Strain and stress variation</li>
+              <li>Displacement, tilt, and rotation</li>
+              <li>Temperature, humidity, wind, and environmental effects</li>
+            </ul>
+            <p><b>Applications:</b></p>
+            <ul class="list">
+              <li>Bridges, buildings, industrial structures</li>
+              <li>Machine-affected and vibration-sensitive facilities</li>
+              <li>Structures exposed to environmental and operational loading</li>
+            </ul>
+          </div>
+          <div class="card-img-mobile">
+            <img src="images/SHM_Solution_img02.png" alt="Image 2">
+          </div>
+
+          <!-- CARD 3 -->
+          <div class="card section-card">
+            <h3 id="lts">Static & Dynamic Load Testing Services</h3>
+            <p><b>Performance Verification & Capacity Assessment</b></p>
+            <p>SCMCES offers static and dynamic load testing services to verify structural performance, validate design assumptions, and support rating or strengthening decisions.</p>
+            <p><b>Scope:</b></p>
+            <ul class="list">
+              <li>Proof load testing</li>
+              <li>Dynamic response testing</li>
+              <li>Deflection, strain, and vibration measurement</li>
+              <li>Correlation with analytical models</li>
+              <li>Compliance with relevant codes and guidelines</li>
+            </ul>
+            <p><b>Outcomes:</b></p>
+            <ul class="list">
+              <li>Actual load-carrying behaviour</li>
+              <li>Serviceability and performance verification</li>
+              <li>Inputs for bridge evaluation and certification</li>
+            </ul>
+          </div>
+          <div class="card-img-mobile">
+            <img src="images/SHM_Solution_img03.png" alt="Image 3">
+          </div>
+
+          <!-- CARD 4 -->
+          <div class="card section-card">
+            <h3 id="slm">Short-Term & Long-Term Structural Monitoring</h3>
+            <p><b>Diagnostic & Continuous Monitoring Services</b></p>
+            <p>Monitoring solutions are tailored based on project objectives:</p>
+            <p><b>Short-Term Monitoring:</b></p>
+            <ul class="list">
+              <li>Diagnostic studies</li>
+              <li>Construction- or event-based monitoring</li>
+              <li>Vibration investigations</li>
+              <li>Load testing support</li>
+            </ul>
+            <p><b>Long-Term Monitoring:</b></p>
+            <ul class="list">
+              <li>Continuous or periodic monitoring systems</li>
+              <li>Performance trend tracking</li>
+              <li>Early warning and threshold-based alerts</li>
+              <li>Support for maintenance planning</li>
+            </ul>
+          </div>
+          <div class="card-img-mobile">
+            <img src="images/SHM_Solution_img04.png" alt="Image 4">
+          </div>
+
+          <!-- CARD 5 -->
+          <div class="card section-card">
+            <h3 id="ssm">Site-Specific Live Load Estimation</h3>
+            <p><b>Measured Load & Demand Assessment</b></p>
+            <p>We estimate actual live loads acting on structures using measured response data rather than assumed codal values.</p>
+            <p><b>Applications:</b></p>
+            <ul class="list">
               <li>Highway and railway bridges</li>
               <li>Metro viaducts and flyovers</li>
-              <li>Long-span and critical bridges</li>          
-          </ul><br>
-          <p><b>Bridge monitoring services include:</b></p>
-          <ul class="list">
-              <li>Dynamic response and vibration monitoring</li>
-              <li>Strain measurement and stress cycle evaluation</li>
-              <li>Static and dynamic load testing</li> 
-              <li>Fatigue damage assessment</li>     
-              <li>Remaining service life estimation</li>     
-              <li>Bridge evaluation and performance rating</li>   
-          </ul>
-          <div class="hr"></div>
-          <div class="mobile-img"><img src="images/SHM_Solution_img04.png" alt="Services"></div>
-          <h3>Building Vibration Monitoring</h3>
-          <p>Building vibration monitoring is essential for structures affected by:</p>      
-          
-          <ul class="list">
-              <li>Nearby construction and blasting</li>
-              <li>Heavy machinery and turbines</li>
-              <li>Traffic-induced vibrations</li>          
-              <li>Wind and seismic excitation</li>
-          </ul>
-          <h3> Our services include: </h3>
-          <ul class="list">
-            <li>Measurement of structural and floor vibrations</li>
-              <li>Comfort and serviceability assessment</li>
-              <li>Identification of resonance and amplification effects</li>
-              <li>Long-term vibration trend analysis</li>
-              <li>Recommendations for mitigation and retrofitting</li>              
-          </ul>
-          <div class="hr"></div>
-          <div class="mobile-img"><img src="images/SHM_Solution_img05.png" alt="Services"></div>
-          <h3>Structural Monitoring Using Sensor Technology</h3>
-          <p>SCMCES designs and deploys <b>sensor-based structural monitoring systems</b>, including:</p>      
-          
-          <ul class="list">
-              <li>Accelerometers</li>
-              <li>Strain gauges</li>
-              <li>Displacement and tilt sensors</li>
-              <li>Environmental sensors (temperature, humidity, wind, etc.)</li>
-          </ul>
-          <br>
-          <p><b>Monitoring can be implemented as:</b></p>
-          <ul class="list">
-            <li><b>Short-term monitoring</b> (diagnostic studies)</li>
-            <li><b>Long-term monitoring</b> (continuous or periodic systems)</li>              
-          </ul>
-          <p>These systems <b>complement conventional inspections</b> and provide objective, measurable performance data.</p>
-          <div class="hr"></div>
-          <div class="mobile-img"><img src="images/SHM_Solution_img04.png" alt="Services"></div>
-          <h3>Instrumentation Planning & SHM System Design</h3>            
+              <li>Industrial and heavy-duty floors</li>
+            </ul>
+            <p><b>Benefits:</b></p>
             <ul class="list">
-            <li>Recommendation of <b>instrumentation schemes</b> tailored to each structure</li>
-            <li>Selection of sensor locations based on structural behaviour</li>  
-            <li>Integration of data acquisition and communication systems</li>
-            <li>Vendor-neutral approach to hardware and software selection</li>
-          </ul>
-          <div class="hr"></div>
-          <div class="mobile-img"><img src="images/SHM_Solution_img05.png" alt="Services"></div>
-          <h3>Structural Testing & Field Measurements</h3>
-          <ul class="list">
-            <li>Static and dynamic load testing</li>
-            <li>Behavioural testing of bridges and buildings</li>  
-            <li>Field strain gauging for stress and fatigue evaluation</li>
-            <li>Site-specific live load estimation based on measured response</li>
-          </ul>
-          <div class="hr"></div>
-          <div class="mobile-img"><img src="images/SHM_Solution_img06.png" alt="Services"></div>
-          <h3>Analytical & Numerical Structural Assessment</h3>
-          <p>We integrate measured data with <b>engineering analysis</b>, including:</p>
-          <ul class="list">
-            <li>Structural modelling and verification</li>
-            <li>Finite Element Analysis (FEA)</li>  
-            <li>Correlation of analytical models with field measurements</li>
-            <li>Performance evaluation under actual operating conditions</li>
-          </ul>
-          <div class="hr"></div>
-          <div class="mobile-img"><img src="images/SHM_Solution_img07.png" alt="Services"></div>
-          <h3>Fatigue, Durability & Remaining Life Assessment</h3>
-          <p>We integrate measured data with <b>engineering analysis</b>, including:</p>
-          <ul class="list">
-            <li>Fatigue damage assessment using real stress histories</li>
-            <li>Identification of critical structural components</li>  
-            <li>Estimation of remaining service life</li>
-            <li>Inputs for repair, strengthening, or rehabilitation decisions</li>
-          </ul>
-          <div class="hr"></div>
-          <div class="mobile-img"><img src="images/SHM_Solution_img08.png" alt="Services"></div>
-          <h3>Training & Capacity Building in SHM</h3>
-          <p>SCMCES also provides <b>training programs on Structural Health Monitoring,</b> covering:</p>
-          <ul class="list">
-            <li>SHM concepts and applications</li>
-            <li>Sensor technologies and instrumentation</li>  
-            <li>Data interpretation and engineering decision-making</li>
-            <li>Practical case studies from Indian infrastructure projects</li>
-          </ul>
-          <div class="hr"></div>
-          <div class="mobile-img"><img src="images/SHM_Solution_img09.png" alt="Services"></div>
-          <h2>Why Choose SCMCES for SHM Services </h2>      
-          <ul class="list">
-            <li>Specialized expertise in <b>Structural Health Monitoring & vibration assessment</b></li>
-            <li>Experience with <b>bridges, buildings, industrial and infrastructure projects</b></li>  
-            <li>Vendor-neutral, engineering-driven solutions</li>
-            <li>Focus on <b>actionable insights,</b> not just data collection</li>
-            <li>Integration of monitoring, testing, and analytical assessment</li>
-          </ul>
-          <div class="mobile-img"><img src="images/SHM_Solution_img10.png" alt="Services"></div>
-        </div>
-        <div>
-          <img src="images/SHM_Solution_img01.png" alt="Services" style="border-radius:14px;border:1px solid rgba(255,255,255,0.12);">
-          <div style="margin-top:10px;color:var(--muted);font-size:13px;">            
+              <li>Realistic demand assessment</li>
+              <li>Improved safety and economy</li>
+              <li>Reduced conservatism in rehabilitation decisions</li>
+            </ul>
           </div>
-          <img src="images/SHM_Solution_img02.png" alt="Services" style="border-radius:14px;border:1px solid rgba(255,255,255,0.12);">
-          <div style="margin-top:10px;color:var(--muted);font-size:13px;">            
+          <div class="card-img-mobile">
+            <img src="images/SHM_Solution_img05.png" alt="Image 5">
           </div>
-          <img src="images/SHM_Solution_img03.png" alt="Services" style="border-radius:14px;border:1px solid rgba(255,255,255,0.12);">
-          <div style="margin-top:10px;color:var(--muted);font-size:13px;">
-          </div>
-          <img src="images/SHM_Solution_img04.png" alt="Services" style="border-radius:14px;border:1px solid rgba(255,255,255,0.12);">
-          <div style="margin-top:10px;color:var(--muted);font-size:13px;">
-          </div>
-          <img src="images/SHM_Solution_img05.png" alt="Services" style="border-radius:14px;border:1px solid rgba(255,255,255,0.12);">
-          <div style="margin-top:10px;color:var(--muted);font-size:13px;">
-          </div>
-          <img src="images/SHM_Solution_img06.png" alt="Services" style="border-radius:14px;border:1px solid rgba(255,255,255,0.12);">
-          <div style="margin-top:10px;color:var(--muted);font-size:13px;">
-          </div>
-          <img src="images/SHM_Solution_img07.png" alt="Services" style="border-radius:14px;border:1px solid rgba(255,255,255,0.12);">
-          <div style="margin-top:10px;color:var(--muted);font-size:13px;">
-          </div>
-          <img src="images/SHM_Solution_img08.png" alt="Services" style="border-radius:14px;border:1px solid rgba(255,255,255,0.12);">
-          <div style="margin-top:10px;color:var(--muted);font-size:13px;">
-          </div>
-          <img src="images/SHM_Solution_img09.png" alt="Services" style="border-radius:14px;border:1px solid rgba(255,255,255,0.12);">
-          <div style="margin-top:10px;color:var(--muted);font-size:13px;">
-          </div>
-          <img src="images/SHM_Solution_img10.png" alt="Services" style="border-radius:14px;border:1px solid rgba(255,255,255,0.12);">
-          <div style="margin-top:10px;color:var(--muted);font-size:13px;">
-          </div>
-        </div>    
 
-      </div>
+          <!-- CARD 6 -->
+          <div class="card section-card">
+            <h3 id="ber">Behavioural Testing, Bridge Evaluation & Performance Rating</h3>
+            <p><b>Structure-Specific Performance Assessment</b></p>
+            <p>SCMCES conducts behavioural testing to understand how a structure responds under real loads and operational conditions.</p>
+            <ul class="list">
+              <li>Load-response characterization</li>
+              <li>Identification of stiffness, redundancy, and load paths</li>
+              <li>Bridge evaluation and rating support</li>
+              <li>Verification of performance assumptions</li>
+            </ul>
+          </div>
+          <div class="card-img-mobile">
+            <img src="images/SHM_Solution_img06.png" alt="Image 6">
+          </div>
+
+          <!-- CARD 7 -->
+          <div class="card section-card">
+            <h3 id="sca">Field Strain Gauging & Stress Cycle Assessment</h3>
+            <p><b>Fatigue-Oriented Measurement Services</b></p>
+            <ul class="list">
+              <li>Steel and composite bridges</li>
+              <li>Industrial structures</li>
+              <li>Crane girders and cyclically loaded systems</li>
+            </ul>
+            <p><b>Outputs:</b></p>
+            <ul class="list">
+              <li>Stress range spectra</li>
+              <li>Stress cycle counting</li>
+              <li>Identification of fatigue-critical locations</li>
+            </ul>
+          </div>
+          <div class="card-img-mobile">
+            <img src="images/SHM_Solution_img07.png" alt="Image 7">
+          </div>
+
+          <!-- CARD 8 -->
+          <div class="card section-card">
+            <h3 id="fda">Fatigue Damage Assessment Services</h3>
+            <p><b>Remaining Fatigue Life Evaluation</b></p>
+            <ul class="list">
+              <li>Fatigue damage accumulation analysis</li>
+              <li>Identification of critical details</li>
+              <li>Risk-based prioritization</li>
+              <li>Inputs for strengthening or replacement planning</li>
+            </ul>
+          </div>
+          <div class="card-img-mobile">
+            <img src="images/SHM_Solution_img08.png" alt="Image 8">
+          </div>
+
+          <!-- CARD 9 -->
+          <div class="card section-card">
+            <h3 id="rfe">Remaining Service Life Estimation</h3>
+            <p><b>Durability & Life-Cycle Assessment Consultancy</b></p>
+            <ul class="list">
+              <li>Measured structural response</li>
+              <li>Fatigue and durability analysis</li>
+              <li>Environmental exposure</li>
+              <li>Actual operational demands</li>
+            </ul>
+            <p><b>Use Cases:</b></p>
+            <ul class="list">
+              <li>Asset life-extension planning</li>
+              <li>Rehabilitation prioritization</li>
+              <li>Investment and maintenance decision support</li>
+            </ul>
+          </div>
+          <div class="card-img-mobile">
+            <img src="images/SHM_Solution_img09.png" alt="Image 9">
+          </div>
+
+          <!-- CARD 10 -->
+          <div class="card section-card">
+            <h3 id="fna">Analytical & Numerical Structural Assessment</h3>
+            <p><b>Engineering Analysis & Model Validation</b></p>
+            <ul class="list">
+              <li>Structural modelling and verification</li>
+              <li>Finite Element Analysis (FEA)</li>
+              <li>Model calibration using measured data</li>
+              <li>Performance assessment under actual conditions</li>
+            </ul>
+          </div>
+          <div class="card-img-mobile">
+            <img src="images/SHM_Solution_img10.png" alt="Image 10">
+          </div>
+
+          <!-- CARD 11 -->
+          <div class="card section-card">
+            <h3>Operational Modal Analysis (OMA) Services</h3>
+            <p><b>Ambient Vibration-Based Dynamic Characterization</b></p>
+            <ul class="list">
+              <li>Identification of natural frequencies, mode shapes, and damping</li>
+              <li>Tracking of modal parameter changes over time</li>
+              <li>Damage detection and condition assessment</li>
+              <li>Suitable for bridges, tall buildings, and large structures</li>
+            </ul>
+          </div>
+
+          <!-- CARD 12 -->
+          <div class="card section-card">
+            <h3>Training & Capacity Building in Structural Health Monitoring</h3>
+            <p><b>Professional Training & Knowledge Transfer</b></p>
+            <ul class="list">
+              <li>SHM concepts and applications</li>
+              <li>Sensor technologies and instrumentation</li>
+              <li>Data interpretation and decision-making</li>
+              <li>Practical case studies from Indian infrastructure projects</li>
+            </ul>
+          </div>
+
+        </div> <!-- text-grid end -->
+
+        <!-- IMAGE GRID (desktop only) -->
+        <div class="image-grid">
+          <img src="images/SHM_Solution_img01.png" alt="Image 1">
+          <img src="images/SHM_Solution_img02.png" alt="Image 2">
+          <img src="images/SHM_Solution_img03.png" alt="Image 3">
+          <img src="images/SHM_Solution_img04.png" alt="Image 4">
+          <img src="images/SHM_Solution_img05.png" alt="Image 5">
+          <img src="images/SHM_Solution_img06.png" alt="Image 6">
+          <img src="images/SHM_Solution_img07.png" alt="Image 7">
+          <img src="images/SHM_Solution_img08.png" alt="Image 8">
+          <img src="images/SHM_Solution_img09.png" alt="Image 9">
+          <img src="images/SHM_Solution_img10.png" alt="Image 10">
+        </div>
+
+      </div> <!-- grid2 end -->
+    </div> <!-- main-card end -->
+
+
+      <!---Section for FAQs-->
       <br>
       <div class="card" id="faq-section">
         <div class="btn-head" >
@@ -407,13 +563,15 @@
 <footer class="footer">
   <div class="container">
     <div class="small">
-      <center>  © <span id="y"></span> SCMCES &nbsp;Email: <a href="mailto:scmces.consultants@gmail.com">scmces.consultants@gmail.com</a></center>
+    <center>  © <span id="y"></span> SCMCES &nbsp;Email: <a href="mailto:scmces.consultants@gmail.com">scmces.consultants@gmail.com</a></center>
       <div style="margin-top:6px;"> </div>
     </div>
   </div>
 </footer>
 <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+<script src="include.js"></script>
 <script src="nav-active.js"></script>
+<script src="security.js"></script>
 
 <!--Collapsable answers -->
 <script>

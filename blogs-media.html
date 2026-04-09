@@ -6,8 +6,31 @@
 <title>Blogs & Media | SCMCES</title>
 <link href="images/01_SCMCES Company logo.png" rel="icon" sizes="3998x2187" type="image/png">
 <link rel="stylesheet" href="css/scmces_wwb20.css">
+<!-- ================= SECURITY HEADERS ================= -->
+
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="X-Frame-Options" content="DENY">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+
+<meta http-equiv="Content-Security-Policy" content="
+  default-src 'self';
+  img-src 'self' data: https:;
+  script-src 'self' https://www.youtube.com https://maps.googleapis.com https://www.googletagmanager.com;
+  style-src 'self' 'unsafe-inline';
+  font-src 'self' https:;
+  frame-src https://www.youtube.com https://www.google.com https://maps.google.com;
+  connect-src 'self' https://api.web3forms.com https://maps.googleapis.com;
+  form-action https://api.web3forms.com;
+  base-uri 'self';
+  object-src 'none';
+  frame-ancestors 'none';
+  upgrade-insecure-requests;
+">
+
 </head>
 <body>
+
+<!--Referred from Partial_pages/header.html & navbar.html-->
 <header class="topbar">
   <div class="container">
     <div class="brandrow">
@@ -21,11 +44,67 @@
   </div>
 </header>
 
+
 <nav class="navbar">
-  <img src="images/01_SCMCES_Company_Freeze_logo.png" alt="SCMCES Logo" class="navbar-logo">  
-  <div class="container">    
-    <div class="nav"><a href="index.html" class="">Home</a><a href="services.html" class="">Services</a><a href="shm_solutions.html" class="">SHM Solutions</a><a href="brochures-projects.html" class="">Brochures & Projects</a><a href="training.html" class="">Training</a><a href="blogs-media.html" class="">Blogs & Media</a><a href="contact-us.html" class="">Contact us</a></div></div>
+
+  <img src="images/01_SCMCES_Company_Freeze_logo.png"
+       alt="SCMCES Logo"
+       class="navbar-logo">
+
+  <div class="menu-toggle" id="menu-toggle">
+    ☰
+  </div>
+
+  <div class="container">
+    <div class="nav" id="nav-menu">  <!-- ✅ FIX HERE -->
+
+      <a href="index.html">Home</a>
+
+      <div class="dropdown">
+        <a href="services.html" class="dropbtn">Services ▾</a>
+        <div class="dropdown-content">
+          <a href="services.html#sdc">Structural Design</a>
+          <a href="services.html#re">Remedial Engineering</a>
+          <a href="services.html#sm">Structural Monitoring</a>
+          <a href="services.html#tr">Training</a>
+          <a href="services.html#rsd">R&D</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <a href="shm_solutions.html" class="dropbtn">SHM Solutions ▾</a>
+        <div class="dropdown-content">
+          <a href="shm_solutions.html#isr">Instrumentation Scheme Recommendation</a>
+          <a href="shm_solutions.html#sbm">Sensor-Based Monitoring</a>
+          <a href="shm_solutions.html#lts">Load Testing Services</a>
+          <a href="shm_solutions.html#slm">Short & Long-Term Monitoring</a>
+          <a href="shm_solutions.html#ssm">Site-Specific Measurement</a>
+          <a href="shm_solutions.html#ber">Bridge Evaluation & Rating</a>
+          <a href="shm_solutions.html#sca">Strain & Stress Cycle Assessment</a>
+          <a href="shm_solutions.html#fda">Fatigue Damage Assessment</a>
+          <a href="shm_solutions.html#rfe">Remaining Service Life Estimation</a>
+          <a href="shm_solutions.html#fna">FEA & Numerical Structural Assessment</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <a href="brochures-projects.html" class="dropbtn">Brochures & Projects ▾</a>
+        <div class="dropdown-content">
+          <a href="brochures-projects.html">Structural Design Projects</a>
+          <a href="brochures-projects.html#rep">Remedial Engineering Projects</a>
+          <a href="brochures-projects.html#smp">Structural Monitoring Projects</a>
+          <a href="brochures-projects.html#pb">Project Brochures</a>
+        </div>
+      </div>
+
+      <a href="training.html">Training</a>
+      <a href="blogs-media.html">Blogs & Media</a>
+      <a href="contact-us.html">Contact us</a>
+
+    </div>
+  </div>
 </nav>
+
 
 <main>
 <section class="section">
@@ -33,70 +112,70 @@
     <div class="grid2">
       <div>
         <div class="btn-head" >
-  
+
           <h2 style="margin:0;">Technical Notes & Blogs</h2>&nbsp;
-          
-          <a class="btn" 
+
+          <a class="btn"
             href="shm_solutions.html#faq-section">
             Explore SHM Related FAQs
-          </a>         
+          </a>
 
         </div><br/>
         <p style="color:var(--muted);margin-top:-6px;">Short, practical reading for civil/structural engineers.</p>
- 
-        
-              
-        
+
+
+
+
         <div class="card" style="margin-bottom:14px;">
           <h3 style="margin-top:0;">Q1: What is the primary purpose of a bridge load test?</h3>
           <p style="margin:0;">The primary purpose is to demonstrate a bridge's capability to safely carry its design loads through physical verification. It is commonly used to resolve uncertainties about structural capacity, assess suspect performance such as excessive deflection, confirm safety after damage or deterioration, verify handing over of new constructions, and quality-assure repair works.</p>
         </div>
-        
+
         <div class="card" style="margin-bottom:14px;">
           <h3 style="margin-top:0;">Q2: In what situations is bridge load testing typically required?</h3>
           <p style="margin:0;">Typical situations include uncertainties about current as-built conditions, suspected performance issues (for example, creep deflection), unknown structural strength from analysis alone, proposed changes to heavier loads, assessment after bomb or fire damage, identified material defects or deterioration, handing over newly built bridges, and verification of repairs or strengthening work.</p>
         </div>
-        
+
         <div class="card" style="margin-bottom:14px;">
           <h3 style="margin-top:0;">Q3: How is load usually applied during a bridge load test?</h3>
           <p style="margin:0;">The most common method uses loaded trucks, either placed in static positions or driven across the bridge. This provides sufficient load to trigger the required structural response for measurement and analysis.</p>
         </div>
-        
+
         <div class="card" style="margin-bottom:14px;">
           <h3 style="margin-top:0;">Q4: What is monitored during a bridge load test?</h3>
           <p style="margin:0;">Deflections are the primary response measured using sensors installed on the structure. In addition, crack widths, material strains, vibration, and temperature are often monitored to obtain a comprehensive understanding of structural behavior.</p>
         </div>
-        
+
         <div class="card" style="margin-bottom:14px;">
           <h3 style="margin-top:0;">Q5: What are the key planning steps before conducting a load test?</h3>
           <p style="margin:0;">Key steps include stakeholder meetings to define objectives and acceptance criteria, site visits to understand access and logistics, preparation of a detailed instrumentation plan, visual inspections and non-destructive material testing, followed by execution of the load test with repeat trials for data validation before final reporting.</p>
         </div>
-        
+
         <div class="card" style="margin-bottom:14px;">
           <h3 style="margin-top:0;">Q6: What is a Static Load Test, and when is it used?</h3>
           <p style="margin:0;">A Static Load Test involves incrementally applying load, typically using stationary trucks, until a target load or signs of structural distress are observed. The target load usually represents the desired rating load with a safety margin. This method is logistically complex, costly, and generally suitable only for ductile and redundant structures, often conducted by government bodies or research institutions.</p>
         </div>
-        
+
         <div class="card" style="margin-bottom:14px;">
           <h3 style="margin-top:0;">Q7: How does a Dynamic Load Test differ from a Static Load Test?</h3>
           <p style="margin:0;">A Dynamic Load Test uses moving loads at different speeds instead of stationary loads. It evaluates the influence of dynamic effects such as vibration and impact on the bridge response and is often carried out to supplement or validate static load test results.</p>
         </div>
-        
+
         <div class="card" style="margin-bottom:14px;">
           <h3 style="margin-top:0;">Q8: What is a Semi-Static Load Test and what are its advantages?</h3>
           <p style="margin:0;">A Semi-Static Load Test is a hybrid approach in which a truck crosses the bridge at a very low speed. It is widely adopted due to lower cost, minimal traffic disruption, and its non-destructive nature. Test measurements are used to calibrate analytical models, from which load-carrying capacity is derived, making it suitable for both research and consultancy applications.</p>
         </div>
-        
+
         <div class="card" style="margin-bottom:14px;">
           <h3 style="margin-top:0;">Q9: What is the goal of a Diagnostic (Semi-Static) Load Test?</h3>
           <p style="margin:0;">The objective is to determine a safe load limit indirectly. Loads at or below rating levels are applied, and the measured responses are used to calibrate a structural model. The final load rating is then computed from the validated analytical model rather than directly from the test data.</p>
         </div>
-        
+
         <div class="card" style="margin-bottom:14px;">
           <h3 style="margin-top:0;">Q10: Why is visual inspection important during the load testing process?</h3>
           <p style="margin:0;">Visual inspections are carried out before, during, and after testing to document existing defects and to identify any new cracks or distress caused by applied loads. This provides critical visual evidence to support the interpretation of measured structural behavior.</p>
         </div>
-                
+
 
 
       </div>
@@ -151,7 +230,7 @@
         <div style="height:14px;"></div>
 
 
-        
+
         <div class="card">
           <h2>YouTube Channel</h2>
           <p style="color:var(--muted);margin-top:-6px;">Key Projects.</p>
@@ -166,12 +245,14 @@
 <footer class="footer">
   <div class="container">
     <div class="small">
-      <center>  © <span id="y"></span> SCMCES &nbsp;Email: <a href="mailto:scmces.consultants@gmail.com">scmces.consultants@gmail.com</a></center>
+    <center>  © <span id="y"></span> SCMCES &nbsp;Email: <a href="mailto:scmces.consultants@gmail.com">scmces.consultants@gmail.com</a></center>
       <div style="margin-top:6px;"> </div>
     </div>
   </div>
 </footer>
 <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+<script src="include.js"></script>
 <script src="nav-active.js"></script>
+<script src="security.js"></script>
 </body>
 </html>
