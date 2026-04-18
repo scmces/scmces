@@ -754,3 +754,81 @@ p[id]{
     z-index: 9999;
   }
 }
+
+/* ===== Navbar Brand (logo + title) ===== */
+.navbar-brand{
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: 10px;
+}
+
+/* Hide both by default */
+.navbar-logo,
+.navbar-title{
+  display: none;
+}
+
+/* Show ONLY when sticky */
+.navbar.sticky .navbar-logo,
+.navbar.sticky .navbar-title{
+  display: block;
+}
+
+/* Logo size */
+.navbar-logo{
+  height: 32px;
+}
+
+/* Title styling */
+.navbar-title{
+  color: var(--gold);
+  font-weight: 700;
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+/* ===== MOBILE ONLY ===== */
+@media (max-width:768px){
+
+  .navbar.sticky{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 10px;
+  }
+
+  .navbar-brand{
+    gap: 5px;
+  }
+
+  .navbar-logo{
+    height: 26px;
+  }
+
+  .navbar-title{
+    font-size: 13px;
+  }
+
+  /* Make navbar reference for absolute positioning */
+.navbar {
+  position: relative;
+}
+
+/* CENTER the title */
+.navbar-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Ensure it still shows only in sticky */
+.navbar-title {
+  display: none;
+}
+
+.navbar.sticky .navbar-title {
+  display: block;
+}
+
+}
