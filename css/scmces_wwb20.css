@@ -754,38 +754,41 @@ p[id]{
     z-index: 9999;
   }
 }
-
-/* ===== Navbar Brand (logo + title) ===== */
+/* ===== Navbar Brand ===== */
 .navbar-brand{
   display: flex;
   align-items: center;
-  gap: 6px;
   margin-left: 10px;
 }
 
-/* Hide both by default */
+/* Hide by default */
 .navbar-logo,
 .navbar-title{
   display: none;
 }
 
-/* Show ONLY when sticky */
-.navbar.sticky .navbar-logo,
-.navbar.sticky .navbar-title{
+/* Show logo ONLY when sticky (all devices) */
+.navbar.sticky .navbar-logo{
   display: block;
 }
 
-/* Logo size */
-.navbar-logo{
-  height: 32px;
-}
-
-/* Title styling */
+/* Title base styling */
 .navbar-title{
   color: var(--gold);
   font-weight: 700;
   font-size: 15px;
   white-space: nowrap;
+}
+
+/* ===== CENTER TITLE ===== */
+.navbar{
+  position: relative;
+}
+
+.navbar-title{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 /* ===== MOBILE ONLY ===== */
@@ -798,10 +801,6 @@ p[id]{
     padding-left: 10px;
   }
 
-  .navbar-brand{
-    gap: 5px;
-  }
-
   .navbar-logo{
     height: 26px;
   }
@@ -810,25 +809,8 @@ p[id]{
     font-size: 13px;
   }
 
-  /* Make navbar reference for absolute positioning */
-.navbar {
-  position: relative;
-}
-
-/* CENTER the title */
-.navbar-title {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-/* Ensure it still shows only in sticky */
-.navbar-title {
-  display: none;
-}
-
-.navbar.sticky .navbar-title {
-  display: block;
-}
-
+  /* ✅ Show title ONLY on mobile + sticky */
+  .navbar.sticky .navbar-title{
+    display: block;
+  }
 }
