@@ -813,4 +813,18 @@ p[id]{
   .navbar.sticky .navbar-title{
     display: block;
   }
+  /* ❌ NEVER show title on desktop */
+@media (min-width:769px){
+  .navbar-title{
+    display: none !important;
+  }
+}
+@media (max-width:768px){
+
+  /* show ONLY in mobile + sticky */
+  .navbar.sticky .navbar-title{
+    display: block;
+  }
+
+}
 }
