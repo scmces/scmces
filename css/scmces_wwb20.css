@@ -753,78 +753,74 @@ p[id]{
     padding-top: 60px;
     z-index: 9999;
   }
-}
-/* ===== Navbar Brand ===== */
+}/* ===== Navbar Brand ===== */
 .navbar-brand{
   display: flex;
   align-items: center;
   margin-left: 10px;
 }
 
-/* Hide by default */
+/* Hide everything by default */
 .navbar-logo,
 .navbar-title{
   display: none;
 }
 
-/* Show logo ONLY when sticky (all devices) */
+/* Show logo when sticky (all devices) */
 .navbar.sticky .navbar-logo{
   display: block;
 }
 
-/* Title base styling */
-.navbar-title{
-  color: var(--gold);
-  font-weight: 700;
-  font-size: 15px;
-  white-space: nowrap;
-}
-
 /* ===== CENTER TITLE ===== */
-.navbar{
-  position: relative;
+/* ===== Sticky mobile logo + title beside logo ===== */
+
+.navbar-brand{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  margin-left:10px;
 }
 
+/* hide title everywhere by default */
 .navbar-title{
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  display:none;
+  color:var(--gold);
+  font-weight:700;
+  white-space:nowrap;
 }
 
-/* ===== MOBILE ONLY ===== */
+/* keep sticky logo */
+.navbar.sticky .navbar-logo{
+  display:block;
+}
+
+/* MOBILE ONLY */
 @media (max-width:768px){
 
   .navbar.sticky{
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding-left: 10px;
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+    padding-left:10px;
   }
 
   .navbar-logo{
-    height: 26px;
+    height:26px;
   }
 
-  .navbar-title{
-    font-size: 13px;
-  }
-
-  /* ✅ Show title ONLY on mobile + sticky */
+  /* show title only in mobile sticky */
   .navbar.sticky .navbar-title{
-    display: block;
+    display:block;
+    position:static;      /* important */
+    transform:none;       /* important */
+    font-size:13px;
   }
-  /* ❌ NEVER show title on desktop */
+
+}
+
+/* NEVER show title on desktop */
 @media (min-width:769px){
   .navbar-title{
-    display: none !important;
+    display:none !important;
   }
-}
-@media (max-width:768px){
-
-  /* show ONLY in mobile + sticky */
-  .navbar.sticky .navbar-title{
-    display: block;
-  }
-
-}
 }
